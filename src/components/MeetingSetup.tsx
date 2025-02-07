@@ -98,7 +98,7 @@ function MeetingSetup({ onSetupComplete }: { onSetupComplete: () => void }) {
                   </div>
 
                   {/* DEVICE SETTINGS */}
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between"> // Modified for testing-setup
                     <div className="flex items-center gap-3">
                       <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
                         <SettingsIcon className="h-5 w-5 text-primary" />
@@ -122,7 +122,7 @@ function MeetingSetup({ onSetupComplete }: { onSetupComplete: () => void }) {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> // Modified for testing-setup
           </Card>
         </div>
       </div>
