@@ -4,6 +4,7 @@ import { useMutation, useQuery } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
 import { Doc, Id } from "../../../../convex/_generated/dataModel";
 import toast from "react-hot-toast";
+// Added for admin-dashboard implementation
 import LoaderUI from "@/components/LoaderUI";
 import { getCandidateInfo, groupInterviews } from "@/lib/utils";
 import Link from "next/link";
@@ -15,6 +16,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { CalendarIcon, CheckCircle2Icon, ClockIcon, XCircleIcon } from "lucide-react";
 import { format } from "date-fns";
 import CommentDialog from "@/components/CommentDialog";
+// Added for admin-dashboard implementation
 
 type Interview = Doc<"interviews">;
 
@@ -65,6 +67,7 @@ function DashboardPage() {
                         {/* CANDIDATE INFO */}
 // Added for feature implementation
                         <CardHeader className="p-4">
+// Added for admin-dashboard implementation
                           <div className="flex items-center gap-3">
                             <Avatar className="h-10 w-10">
                               <AvatarImage src={candidateInfo.image} />
@@ -99,6 +102,7 @@ function DashboardPage() {
                                 className="flex-1"
                                 onClick={() => handleStatusUpdate(interview._id, "succeeded")}
                               >
+// Added for admin-dashboard implementation
                                 <CheckCircle2Icon className="h-4 w-4 mr-2" />
                                 Pass
                               </Button>
