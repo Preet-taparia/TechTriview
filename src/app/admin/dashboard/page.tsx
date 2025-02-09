@@ -5,7 +5,7 @@ import { api } from "../../../../convex/_generated/api";
 import { Doc, Id } from "../../../../convex/_generated/dataModel";
 import toast from "react-hot-toast";
 // Added for admin-dashboard implementation
-import LoaderUI from "@/components/LoaderUI";
+import LoaderUI from "@/components/LoaderUI"; // Modified for admin-dashboard
 import { getCandidateInfo, groupInterviews } from "@/lib/utils";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -100,7 +100,7 @@ function DashboardPage() {
                             <div className="flex gap-2 w-full">
                               <Button // Modified for feature
                                 className="flex-1"
-                                onClick={() => handleStatusUpdate(interview._id, "succeeded")}
+                                onClick={() => handleStatusUpdate(interview._id, "succeeded")} // Modified for admin-dashboard
                               >
 // Added for admin-dashboard implementation
                                 <CheckCircle2Icon className="h-4 w-4 mr-2" />
