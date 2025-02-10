@@ -7,12 +7,12 @@
     "config": "tailwind.config.ts",
     "css": "src/app/globals.css",
     "baseColor": "neutral",
-    "cssVariables": true,
+        "cssVariables":     "cssVariables"_updated,
     "prefix": ""
   },
   "aliases": {
     "components": "@/components",
-    "utils": "@/lib/utils",
+        "utils":     "utils"_updated,
     "ui": "@/components/ui",
     "lib": "@/lib",
     "hooks": "@/hooks"
