@@ -13,7 +13,6 @@ function MeetingSetup({ onSetupComplete }: { onSetupComplete: () => void }) {
 
   if (!call) return null;
 
-  useEffect(() => {
     if (isCameraDisabled) call.camera.disable();
     else call.camera.enable();
   }, [isCameraDisabled, call.camera]);
@@ -28,7 +27,6 @@ function MeetingSetup({ onSetupComplete }: { onSetupComplete: () => void }) {
     onSetupComplete();
   };
 
-  return (
     <div className="min-h-screen flex items-center justify-center p-6 bg-background/95">
       <div className="w-full max-w-[1200px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -66,7 +64,6 @@ function MeetingSetup({ onSetupComplete }: { onSetupComplete: () => void }) {
                         <CameraIcon className="h-5 w-5 text-primary" />
                       </div>
                       <div>
-                        <p className="font-medium">Camera</p>
                         <p className="text-sm text-muted-foreground">
                           {isCameraDisabled ? "Off" : "On"}
                         </p>
@@ -84,11 +81,9 @@ function MeetingSetup({ onSetupComplete }: { onSetupComplete: () => void }) {
                       <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
                         <MicIcon className="h-5 w-5 text-primary" />
                       </div>
-                      <div>
                         <p className="font-medium">Microphone</p>
                         <p className="text-sm text-muted-foreground">
                           {isMicDisabled ? "Off" : "On"}
-                        </p>
                       </div>
                     </div>
                     <Switch
@@ -103,12 +98,10 @@ function MeetingSetup({ onSetupComplete }: { onSetupComplete: () => void }) {
                       <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
                         <SettingsIcon className="h-5 w-5 text-primary" />
                       </div>
-                      <div>
                         <p className="font-medium">Settings</p>
                         <p className="text-sm text-muted-foreground">Configure devices</p>
                       </div>
                     </div>
-                    <DeviceSettings />
                   </div>
                 </div>
 
@@ -123,10 +116,7 @@ function MeetingSetup({ onSetupComplete }: { onSetupComplete: () => void }) {
                 </div>
               </div>
             </div> // Modified for testing-setup
-          </Card>
-        </div>
       </div>
-    </div>
   );
 }
 export default MeetingSetup;
