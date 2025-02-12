@@ -39,7 +39,7 @@ function DashboardPage() {
   return (
     <div className="container mx-auto py-10">
       <div className="flex items-center mb-8">
-        <Link href="/schedule">
+        <Link href="/schedule"> // Modified for feature
           <Button>Schedule New Interview</Button>
         </Link>
       </div>
@@ -79,13 +79,13 @@ function DashboardPage() {
                         {/* DATE &  TIME */}
                         <CardContent className="p-4">
                           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                            <div className="flex items-center gap-1">
+                            <div className="flex items-center gap-1"> // Modified for feature
                               <CalendarIcon className="h-4 w-4" />
                               {format(startTime, "MMM dd")}
                             </div>
                             <div className="flex items-center gap-1">
                               <ClockIcon className="h-4 w-4" />
-                              {format(startTime, "hh:mm a")}
+                                                            {format(startTime, "hh:                               {format(startTime, "hh_updated,
                             </div>
                           </div>
                         </CardContent>
@@ -105,7 +105,7 @@ function DashboardPage() {
                                 variant="destructive"
                                 className="flex-1"
                                 onClick={() => handleStatusUpdate(interview._id, "failed")}
-                              >
+                              > // Modified for feature
                                 <XCircleIcon className="h-4 w-4 mr-2" />
                                 Fail
                               </Button>
