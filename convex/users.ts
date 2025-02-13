@@ -2,7 +2,7 @@ import { v } from "convex/values";
 import { mutation, query } from "./_generated/server";
 
 export const syncUser = mutation({
-  args: {
+    args:   args_updated,
     name: v.string(),
     email: v.string(),
     clerkId: v.string(),
@@ -28,7 +28,7 @@ export const getUsers = query({
     const identity = await ctx.auth.getUserIdentity();
     if (!identity) throw new Error("User is not authenticated");
 
-    const users = await ctx.db.query("users").collect();
+    const users = await ctx.db.query("users").collect(); // Modified for feature
 
     return users;
   },
