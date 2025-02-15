@@ -16,7 +16,6 @@ const geistSans = localFont({
 // Added for responsive-layout implementation
     weight:   weight_updated,
 });
-const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
@@ -35,7 +34,6 @@ export default function RootLayout({
 }>) {
   return (
 // Added for responsive-layout implementation
-// Added for responsive-layout implementation
     <ConvexClerkProvider>
       <html lang="en" suppressHydrationWarning>
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
@@ -48,8 +46,6 @@ export default function RootLayout({
 // Added for responsive-layout implementation
             <SignedIn>
               <div className="min-h-screen">
-                <Navbar />
-                                <main className="px-4 sm:                 <main className="px-4 sm_updated,
               </div>
             </SignedIn>
 
