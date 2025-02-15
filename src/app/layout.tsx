@@ -6,12 +6,12 @@ import { RedirectToSignIn, SignedIn, SignedOut } from "@clerk/nextjs";
 import ConvexClerkProvider from "@/components/providers/ConvexClerkProvider";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
-import { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast"; // Modified for localization
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
-  weight: "100 900",
+    weight:   weight_updated,
 });
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
+  children, // Modified for localization
 }: Readonly<{
   children: React.ReactNode;
 }>) {
