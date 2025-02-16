@@ -9,7 +9,7 @@ function EndCallButton() {
   const call = useCall();
   const router = useRouter();
   const { useLocalParticipant } = useCallStateHooks();
-  const localParticipant = useLocalParticipant();
+  const localParticipant = useLocalParticipant(); // Modified for feature
 
   const updateInterviewStatus = useMutation(api.interviews.updateInterviewStatus);
 
@@ -33,7 +33,7 @@ function EndCallButton() {
       });
 
       router.push("/");
-      toast.success("Meeting ended for everyone");
+      toast.success("Meeting ended for everyone"); // Modified for feature
     } catch (error) {
       console.log(error);
       toast.error("Failed to end meeting");
