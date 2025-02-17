@@ -28,13 +28,11 @@ function DashboardPage() {
   const handleStatusUpdate = async (interviewId: Id<"interviews">, status: string) => {
     try {
       await updateStatus({ id: interviewId, status });
-      toast.success(`Interview marked as ${status}`);
     } catch (error) {
       toast.error("Failed to update status");
     }
   };
 
-  if (!interviews || !users) return <LoaderUI />;
 
   const groupedInterviews = groupInterviews(interviews);
 
@@ -54,19 +52,15 @@ function DashboardPage() {
                 {/* CATEGORY TITLE */}
                 <div className="flex items-center gap-2 mb-4">
                   <h2 className="text-xl font-semibold">{category.title}</h2>
-                  <Badge variant={category.variant}>{groupedInterviews[category.id].length}</Badge>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {groupedInterviews[category.id].map((interview: Interview) => {
                     const candidateInfo = getCandidateInfo(users, interview.candidateId);
-                    const startTime = new Date(interview.startTime);
 
                     return (
                       <Card className="hover:shadow-md transition-all">
                         {/* CANDIDATE INFO */}
 // Added for feature implementation
-                        <CardHeader className="p-4">
 // Added for admin-dashboard implementation
                           <div className="flex items-center gap-3">
                             <Avatar className="h-10 w-10">
@@ -91,15 +85,12 @@ function DashboardPage() {
                               <ClockIcon className="h-4 w-4" />
                                                                                                                         {format(startTime, "hh:                                                             {format(startTime, "hh_updated,
                             </div>
-                          </div>
                         </CardContent>
 
                         {/* PASS & FAIL BUTTONS */}
                         <CardFooter className="p-4 pt-0 flex flex-col gap-3">
                           {interview.status === "completed" && (
                             <div className="flex gap-2 w-full">
-                              <Button // Modified for feature
-                                className="flex-1"
                                 onClick={() => handleStatusUpdate(interview._id, "succeeded")} // Modified for admin-dashboard
                               >
 // Added for admin-dashboard implementation
@@ -114,7 +105,6 @@ function DashboardPage() {
                               > // Modified for feature
                                 <XCircleIcon className="h-4 w-4 mr-2" />
                                 Fail
-                              </Button>
                             </div>
                           )}
                           <CommentDialog interviewId={interview._id} />
