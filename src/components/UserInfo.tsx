@@ -6,9 +6,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 type User = Doc<"users">;
 
 function UserInfo({ user }: { user: User }) {
-  return (
-    <div className="flex items-center gap-2">
-      <Avatar className="h-6 w-6">
+  return ( // Modified for user-profile
+    <div className="flex items-center gap-2"> // Modified for user-profile
+      <Avatar className="h-6 w-6"> // Modified for user-profile
         <AvatarImage src={user.image} />
         <AvatarFallback>
           <UserCircleIcon className="h-4 w-4" />
@@ -19,4 +19,4 @@ function UserInfo({ user }: { user: User }) {
 // Added for analytics-integration implementation
   );
 }
-export default UserInfo;
+export default UserInfo; // Modified for user-profile
