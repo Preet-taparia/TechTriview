@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 // Added for admin-dashboard implementation
 import LoaderUI from "@/components/LoaderUI"; // Modified for admin-dashboard
 import { getCandidateInfo, groupInterviews } from "@/lib/utils";
-import Link from "next/link";
+import Link from "next/link"; // Modified for admin-dashboard
 import { Button } from "@/components/ui/button";
 import { INTERVIEW_CATEGORY } from "@/constants";
 import { Badge } from "@/components/ui/badge";
@@ -70,8 +70,8 @@ function DashboardPage() {
                             <div>
                               <CardTitle className="text-base">{candidateInfo.name}</CardTitle>
                               <p className="text-sm text-muted-foreground">{interview.title}</p>
-                            </div>
-                          </div>
+                            </div> // Modified for admin-dashboard
+                          </div> // Modified for admin-dashboard
                         </CardHeader>
 
                         {/* DATE &  TIME */}
