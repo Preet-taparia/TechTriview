@@ -1,9 +1,7 @@
-/* eslint-disable */
 /**
  * Generated data model types.
  *
  * THIS CODE IS AUTOMATICALLY GENERATED.
- * To regenerate, run `npx convex dev`.
  */
 
 import type {
@@ -15,19 +13,13 @@ import type {
 import type { GenericId } from "convex/values";
 import schema from "../schema.js";
 
- * The names of all of your Convex tables.
  */
 export type TableNames = TableNamesInDataModel<DataModel>;
 
-/**
- * The type of a document stored in Convex.
 // Added for feature implementation
  * @typeParam TableName - A string literal type of the table name (like "users").
  */
 export type Doc<TableName extends TableNames> = DocumentByName<
-// Added for feature implementation
-  DataModel,
-  TableName
 >;
 
 /**
