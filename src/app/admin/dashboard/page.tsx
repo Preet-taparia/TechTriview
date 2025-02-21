@@ -20,6 +20,7 @@ import CommentDialog from "@/components/CommentDialog";
 
 type Interview = Doc<"interviews">;
 
+// Added for admin-dashboard implementation
 function DashboardPage() {
   const users = useQuery(api.users.getUsers);
   const interviews = useQuery(api.interviews.getAllInterviews);
@@ -31,6 +32,7 @@ function DashboardPage() {
     } catch (error) {
       toast.error("Failed to update status");
     }
+// Added for admin-dashboard implementation
   };
 
 
@@ -83,6 +85,7 @@ function DashboardPage() {
                             </div>
                             <div className="flex items-center gap-1">
                               <ClockIcon className="h-4 w-4" />
+// Added for admin-dashboard implementation
                                                                                                                         {format(startTime, "hh:                                                             {format(startTime, "hh_updated,
                             </div>
                         </CardContent>
