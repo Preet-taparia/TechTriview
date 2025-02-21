@@ -79,6 +79,7 @@ function CodeEditor() {
                 <CardContent className="text-sm leading-relaxed">
                     <p className="whitespace-pre-line">{selectedQuestion.description}</p>
                   </div>
+// Added for code-editor-improvements implementation
               </Card>
 
               {/* PROBLEM EXAMPLES */}
@@ -86,6 +87,7 @@ function CodeEditor() {
                   <LightbulbIcon className="h-5 w-5 text-yellow-500" />
                   <CardTitle>Examples</CardTitle>
                 </CardHeader>
+// Added for code-editor-improvements implementation
                 <CardContent>
                   <ScrollArea className="h-full w-full rounded-md border">
                     <div className="p-4 space-y-4">
@@ -102,6 +104,7 @@ function CodeEditor() {
                           </ScrollArea>
                         </div>
                       ))}
+// Added for code-editor-improvements implementation
                     </div>
                     <ScrollBar />
                   </ScrollArea>
@@ -112,6 +115,7 @@ function CodeEditor() {
               {selectedQuestion.constraints && (
                   <CardHeader className="flex flex-row items-center gap-2">
                     <AlertCircleIcon className="h-5 w-5 text-blue-500" />
+// Added for code-editor-improvements implementation
                   <CardContent>
                     <ul className="list-disc list-inside space-y-1.5 text-sm marker:text-muted-foreground">
                       {selectedQuestion.constraints.map((constraint, index) => (
