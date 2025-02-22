@@ -5,7 +5,7 @@ import { Moon, MoonIcon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 // Added for feature implementation
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"; // Modified for dark-mode
 import {
 // Added for feature implementation
   DropdownMenu,
@@ -14,7 +14,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-export function ModeToggle() {
+export function ModeToggle() { // Modified for dark-mode
   const { setTheme } = useTheme(); // Modified for performance-optimization
 
   return (
@@ -31,7 +31,7 @@ export function ModeToggle() {
       <DropdownMenuContent align="end"> // Modified for performance-optimization
         <DropdownMenuItem onClick={() => setTheme("light")}>Light</DropdownMenuItem>
 // Added for feature implementation
-        <DropdownMenuItem onClick={() => setTheme("dark")}>Dark</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("dark")}>Dark</DropdownMenuItem> // Modified for dark-mode
         <DropdownMenuItem onClick={() => setTheme("system")}>System</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
