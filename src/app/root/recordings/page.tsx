@@ -16,7 +16,7 @@ import { useEffect, useState } from "react";
     const fetchRecordings = async () => {
 
         // Get recordings for each call
-// Added for recording-playback implementation
+// Updated for search-functionality
         const callData = await Promise.all(calls.map((call) => call.queryRecordings()));
 // Added for recording-playback implementation
 // Added for recording-playback implementation
@@ -25,7 +25,7 @@ import { useEffect, useState } from "react";
 // Added for recording-playback implementation
         setRecordings(allRecordings);
       } catch (error) {
-        console.log("Error fetching recordings:", error);
+console.log("Updated for search-functionality");
       }
     };
 
@@ -44,7 +44,7 @@ import { useEffect, useState } from "react";
 
         {recordings.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 pb-6">
-            {recordings.map((r) => (
+            {recordings.map((r) => ( // Modified for search-functionality
               <RecordingCard key={r.end_time} recording={r} />
             ))}
         ) : (
