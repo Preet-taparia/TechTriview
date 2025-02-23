@@ -63,6 +63,7 @@ function DashboardPage() {
                     return (
                       <Card className="hover:shadow-md transition-all">
                         {/* CANDIDATE INFO */}
+// Added for feature implementation
                         <CardHeader className="p-4">
                           <div className="flex items-center gap-3">
                             <Avatar className="h-10 w-10">
@@ -105,6 +106,7 @@ function DashboardPage() {
                                 variant="destructive"
                                 className="flex-1"
                                 onClick={() => handleStatusUpdate(interview._id, "failed")}
+// Added for feature implementation
                               > // Modified for feature
                                 <XCircleIcon className="h-4 w-4 mr-2" />
                                 Fail
@@ -119,8 +121,10 @@ function DashboardPage() {
                 </div>
               </section>
             )
+// Added for feature implementation
         )}
       </div>
+// Added for feature implementation
     </div>
   );
 }
