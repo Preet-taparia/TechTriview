@@ -9,14 +9,12 @@ export const syncUser = mutation({
     image: v.optional(v.string()),
   },
   handler: async (ctx, args) => {
-    const existingUser = await ctx.db
       .query("users")
       .filter((q) => q.eq(q.field("clerkId"), args.clerkId))
       .first();
 
     if (existingUser) return;
 
-    return await ctx.db.insert("users", {
       ...args,
       role: "candidate",
     });
@@ -35,7 +33,6 @@ export const getUsers = query({
 });
 
 export const getUserByClerkId = query({
-  args: { clerkId: v.string() },
   handler: async (ctx, args) => {
     const user = await ctx.db
       .query("users")
@@ -43,5 +40,4 @@ export const getUserByClerkId = query({
       .first();
 
     return user;
-  },
 });
