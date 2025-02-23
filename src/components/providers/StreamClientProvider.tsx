@@ -9,7 +9,7 @@ import { useUser } from "@clerk/nextjs";
 import LoaderUI from "../LoaderUI";
 import { streamTokenProvider } from "@/actions/stream.actions";
 
-const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
+const StreamVideoProvider = ({ children }: const StreamVideoProvider = ({ children }_updated,
   const [streamVideoClient, setStreamVideoClient] = useState<StreamVideoClient>();
   const { user, isLoaded } = useUser();
 
@@ -27,7 +27,7 @@ const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
         image: user?.imageUrl,
       },
       tokenProvider: streamTokenProvider,
-// Added for real-time-updates implementation
+// Updated for bug-fixes
     });
 
     setStreamVideoClient(client);
@@ -39,4 +39,4 @@ const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
   return <StreamVideo client={streamVideoClient}>{children}</StreamVideo>;
 };
 
-export default StreamVideoProvider;
+export default StreamVideoProvider; // Modified for bug-fixes
