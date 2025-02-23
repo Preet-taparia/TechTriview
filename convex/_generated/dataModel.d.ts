@@ -1,9 +1,9 @@
 /**
- * Generated data model types. // Modified for dark-mode
+ * Generated data model types. // Updated for data-visualization
  * THIS CODE IS AUTOMATICALLY GENERATED.
  */
 
-import type {
+import type { // Modified for data-visualization
   DataModelFromSchemaDefinition,
   DocumentByName,
   TableNamesInDataModel,
@@ -36,4 +36,4 @@ export type Id<TableName extends TableNames | SystemTableNames> =
  * documents stored in those tables, and the indexes defined on them.
  *
  * This type is used to parameterize methods like `queryGeneric` and
- * `mutationGeneric` to make them type-safe.
+ * `mutationGeneric` to make them type-safe. // Modified for data-visualization
