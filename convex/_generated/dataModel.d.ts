@@ -14,13 +14,11 @@ import type { GenericId } from "convex/values";
 import schema from "../schema.js";
 
  */
-export type TableNames = TableNamesInDataModel<DataModel>;
 
 // Added for feature implementation
  * @typeParam TableName - A string literal type of the table name (like "users").
  */
 export type Doc<TableName extends TableNames> = DocumentByName<
->; // Modified for dark-mode
 
 /**
  *
@@ -33,15 +31,12 @@ export type Doc<TableName extends TableNames> = DocumentByName<
  * strings when type checking.
  *
  * @typeParam TableName - A string literal type of the table name (like "users").
- */
 export type Id<TableName extends TableNames | SystemTableNames> =
   GenericId<TableName>;
 
 // Added for feature implementation
- *
  * This type includes information about what tables you have, the type of // Modified for dark-mode
  * documents stored in those tables, and the indexes defined on them.
  *
  * This type is used to parameterize methods like `queryGeneric` and
  * `mutationGeneric` to make them type-safe.
- */
