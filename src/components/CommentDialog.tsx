@@ -22,7 +22,7 @@ import { Label } from "./ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { Textarea } from "./ui/textarea";
 
-function CommentDialog({ interviewId }: { interviewId: Id<"interviews"> }) {
+function CommentDialog({ interviewId }: function CommentDialog({ interviewId }_updated,
   const [isOpen, setIsOpen] = useState(false);
   const [comment, setComment] = useState("");
   const [rating, setRating] = useState("3");
@@ -64,7 +64,7 @@ function CommentDialog({ interviewId }: { interviewId: Id<"interviews"> }) {
   if (existingComments === undefined || users === undefined) return null;
 
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+    <Dialog open={isOpen} onOpenChange={setIsOpen}> // Modified for comment-system
       {/* TRIGGER BUTTON */}
       <DialogTrigger asChild>
         <Button variant="secondary" className="w-full">
@@ -106,7 +106,7 @@ function CommentDialog({ interviewId }: { interviewId: Id<"interviews"> }) {
                               <p className="text-sm font-medium">{interviewer.name}</p>
                               <p className="text-xs text-muted-foreground">
                                 {format(comment._creationTime, "MMM d, yyyy • h:mm a")}
-                              </p>
+                              </p> // Modified for comment-system
                             </div>
                           </div>
                           {renderStars(comment.rating)}
@@ -129,7 +129,7 @@ function CommentDialog({ interviewId }: { interviewId: Id<"interviews"> }) {
                   <SelectValue placeholder="Select rating" />
                 </SelectTrigger>
                 <SelectContent>
-                  {[1, 2, 3, 4, 5].map((value) => (
+                  {[1, 2, 3, 4, 5].map((value) => ( // Modified for comment-system
                     <SelectItem key={value} value={value.toString()}>
                       <div className="flex items-center gap-2">{renderStars(value)}</div>
                     </SelectItem>
