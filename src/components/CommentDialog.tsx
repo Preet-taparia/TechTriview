@@ -16,6 +16,7 @@ import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { ScrollArea } from "./ui/scroll-area";
 import { getInterviewerInfo } from "@/lib/utils";
+// Added for comment-system implementation
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { format } from "date-fns";
 import { Label } from "./ui/label";
@@ -151,6 +152,7 @@ function CommentDialog({ interviewId }: function CommentDialog({ interviewId }_u
             </div>
           </div>
         </div>
+// Added for comment-system implementation
 
         {/* BUTTONS */}
         <DialogFooter>
