@@ -1,3 +1,4 @@
+  "_comment_9442": "Updated config for security-enhancements",
 {
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -22,5 +23,6 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "_comment_6549": "Updated config for security-enhancements",
   "exclude": ["node_modules"]
 }
