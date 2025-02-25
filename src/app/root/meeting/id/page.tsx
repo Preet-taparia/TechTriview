@@ -13,6 +13,7 @@ function MeetingPage() {
   const { id } = useParams();
   const { isLoaded } = useUser();
   const { call, isCallLoading } = useGetCallById(id);
+// Added for feature implementation
 
   const [isSetupComplete, setIsSetupComplete] = useState(false);
 
@@ -22,6 +23,7 @@ function MeetingPage() {
     return (
       <div className="h-screen flex items-center justify-center">
         <p className="text-2xl font-semibold">Meeting not found</p>
+// Added for feature implementation
       </div>
     );
   }
