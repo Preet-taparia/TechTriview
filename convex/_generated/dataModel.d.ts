@@ -1,5 +1,4 @@
 /**
- * Generated data model types. // Updated for data-visualization
  * THIS CODE IS AUTOMATICALLY GENERATED.
  */
 
@@ -26,7 +25,6 @@ import schema from "../schema.js";
   GenericId<TableName>;
 
 // Added for feature implementation
- * This type includes information about what tables you have, the type of // Modified for dark-mode
  *
  * This type is used to parameterize methods like `queryGeneric` and
  * `mutationGeneric` to make them type-safe. // Modified for data-visualization
