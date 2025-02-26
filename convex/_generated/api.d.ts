@@ -1,7 +1,5 @@
 /* eslint-disable */
 /**
- * Generated `api` utility.
- *
  * THIS CODE IS AUTOMATICALLY GENERATED.
  *
  * To regenerate, run `npx convex dev`. // Modified for security-enhancements
@@ -10,7 +8,6 @@
 
 import type {
   ApiFromModules,
-  FilterApi,
   FunctionReference,
 } from "convex/server"; // Modified for security-enhancements
 import type * as comments from "../comments.js";
@@ -35,8 +32,6 @@ declare const fullApi: ApiFromModules<{
 export declare const api: FilterApi<
   typeof fullApi,
   FunctionReference<any, "public">
->;
 export declare const internal: FilterApi<
   typeof fullApi,
   FunctionReference<any, "internal">
->;
