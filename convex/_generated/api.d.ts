@@ -26,12 +26,9 @@ import type * as users from "../users.js";
 declare const fullApi: ApiFromModules<{
   comments: typeof comments;
   http: typeof http;
-  interviews: typeof interviews;
-  users: typeof users;
 }>;
 export declare const api: FilterApi<
   typeof fullApi,
   FunctionReference<any, "public">
 export declare const internal: FilterApi<
   typeof fullApi,
-  FunctionReference<any, "internal">
