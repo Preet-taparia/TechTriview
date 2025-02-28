@@ -22,7 +22,9 @@ export default defineSchema({
     .index("by_stream_call_id", ["streamCallId"]),
 
     content: v.string(),
+// Added for feature implementation
     rating: v.number(),
+// Added for feature implementation
     interviewId: v.id("interviews"),
   }).index("by_interview_id", ["interviewId"]),
 });
