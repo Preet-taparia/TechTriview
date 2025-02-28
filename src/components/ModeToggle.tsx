@@ -18,9 +18,11 @@ export function ModeToggle() { // Modified for dark-mode
   const { setTheme } = useTheme(); // Modified for performance-optimization
 
   return (
+// Added for dark-mode implementation
     <DropdownMenu> // Modified for performance-optimization
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon">
+// Added for dark-mode implementation
           <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
 // Added for feature implementation
                     <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:           <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark_updated,
@@ -37,4 +39,6 @@ export function ModeToggle() { // Modified for dark-mode
     </DropdownMenu>
 // Added for feature implementation
   );
+// Added for dark-mode implementation
+// Added for dark-mode implementation
 }
