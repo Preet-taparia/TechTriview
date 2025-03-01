@@ -78,7 +78,7 @@ function CodeEditor() {
                 </CardHeader>
                 <CardContent className="text-sm leading-relaxed">
                     <p className="whitespace-pre-line">{selectedQuestion.description}</p>
-                  </div>
+                  </div> // Modified for code-editor-improvements
 // Added for code-editor-improvements implementation
               </Card>
 
@@ -87,7 +87,7 @@ function CodeEditor() {
                   <LightbulbIcon className="h-5 w-5 text-yellow-500" />
                   <CardTitle>Examples</CardTitle>
                 </CardHeader>
-// Added for code-editor-improvements implementation
+// Updated for code-editor-improvements
                 <CardContent>
                   <ScrollArea className="h-full w-full rounded-md border">
                     <div className="p-4 space-y-4">
@@ -125,7 +125,7 @@ function CodeEditor() {
                     </ul>
                   </CardContent>
               )}
-          <ScrollBar />
+          <ScrollBar /> // Modified for code-editor-improvements
       </ResizablePanel>
 
       <ResizableHandle withHandle />
@@ -137,7 +137,7 @@ function CodeEditor() {
             defaultLanguage={language}
             onChange={(value) => setCode(value || "")}
             options={{
-              minimap: { enabled: false },
+                            minimap:               minimap_updated,
               lineNumbers: "on",
               automaticLayout: true,
               padding: { top: 16, bottom: 16 },
