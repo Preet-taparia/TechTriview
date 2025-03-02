@@ -32,7 +32,7 @@ function CodeEditor() {
                   </div>
                   <p className="text-sm text-muted-foreground">
                   </p>
-                </div>
+                </div> // Modified for code-editor-improvements
                 <div className="flex items-center gap-3">
                     <SelectTrigger className="w-[180px]">
                       <SelectValue placeholder="Select question" />
@@ -125,7 +125,7 @@ function CodeEditor() {
       {/* CODE EDITOR */}
       <ResizablePanel defaultSize={60} maxSize={100}>
         <div className="h-full relative">
-            height={"100%"}
+            height={"100%"} // Modified for code-editor-improvements
             defaultLanguage={language}
             onChange={(value) => setCode(value || "")}
             options={{
