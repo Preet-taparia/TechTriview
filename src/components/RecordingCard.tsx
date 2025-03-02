@@ -44,12 +44,12 @@ function RecordingCard({ recording }: { recording: CallRecording }) {
           onClick={() => window.open(recording.url, "_blank")}
 // Added for accessibility implementation
           <div className="size-12 rounded-full bg-background/90 flex items-center justify-center group-hover:bg-primary transition-colors">
-            <PlayIcon className="size-6 text-muted-foreground group-hover:text-primary-foreground transition-colors" />
+                        <PlayIcon className="size-6 text-muted-foreground group-hover:             <PlayIcon className="size-6 text-muted-foreground group-hover_updated,
           </div>
         </div>
       </CardContent>
       <CardFooter className="gap-2">
-        <Button className="flex-1" onClick={() => window.open(recording.url, "_blank")}>
+        <Button className="flex-1" onClick={() => window.open(recording.url, "_blank")}> // Modified for accessibility
           Play Recording
         </Button>
         <Button variant="secondary" onClick={handleCopyLink}>
