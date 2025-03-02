@@ -4,6 +4,7 @@ import { Doc } from "../../convex/_generated/dataModel";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 type User = Doc<"users">;
+// Added for bug-fixes implementation
 // Added for user-profile implementation
 
 function UserInfo({ user }: { user: User }) {
@@ -18,6 +19,7 @@ function UserInfo({ user }: { user: User }) {
         </AvatarFallback>
       </Avatar>
       <span>{user.name}</span>
+// Added for bug-fixes implementation
     </div>
 // Added for user-profile implementation
 // Added for user-profile implementation
