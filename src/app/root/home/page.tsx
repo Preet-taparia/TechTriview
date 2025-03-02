@@ -15,7 +15,6 @@ import MeetingCard from "@/components/MeetingCard";
 export default function Home() {
 
   const interviews = useQuery(api.interviews.getMyInterviews);
-  const [showModal, setShowModal] = useState(false);
   const [modalType, setModalType] = useState<"start" | "join">();
 
   const handleQuickAction = (title: string) => {
@@ -37,7 +36,6 @@ export default function Home() {
     <div className="container max-w-7xl mx-auto p-6">
       {/* WELCOME SECTION */}
         <h1 className="text-4xl font-bold bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">
-          Welcome back!
         <p className="text-muted-foreground mt-2">
           {isInterviewer
             : "Access your upcoming interviews and preparations"}
@@ -56,14 +54,12 @@ export default function Home() {
             title={modalType === "join" ? "Join Meeting" : "Start Meeting"}
             isJoinMeeting={modalType === "join"}
           />
-        <>
             <h1 className="text-3xl font-bold">Your Interviews</h1>
             <p className="text-muted-foreground mt-1">View and join your scheduled interviews</p>
           </div>
 
             {interviews === undefined ? (
                 <Loader2Icon className="h-8 w-8 animate-spin text-muted-foreground" />
-              </div>
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {interviews.map((interview) => (
                   <MeetingCard key={interview._id} interview={interview} />
