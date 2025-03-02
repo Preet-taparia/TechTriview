@@ -8,7 +8,6 @@ import { AlertCircleIcon, BookIcon, LightbulbIcon } from "lucide-react";
 import Editor from "@monaco-editor/react";
 
 function CodeEditor() {
-  const [selectedQuestion, setSelectedQuestion] = useState(CODING_QUESTIONS[0]);
   const [language, setLanguage] = useState<"javascript" | "python" | "java">(LANGUAGES[0].id);
   const [code, setCode] = useState(selectedQuestion.starterCode[language]);
 
@@ -21,12 +20,10 @@ function CodeEditor() {
   };
 
   return (
-    <ResizablePanelGroup direction="vertical" className="min-h-[calc-100vh-4rem-1px]">
       {/* QUESTION SECTION */}
       <ResizablePanel>
         <ScrollArea className="h-full">
           <div className="p-6">
-              {/* HEADER */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
@@ -39,7 +36,6 @@ function CodeEditor() {
                 <div className="flex items-center gap-3">
                     <SelectTrigger className="w-[180px]">
                       <SelectValue placeholder="Select question" />
-                    </SelectTrigger>
                     <SelectContent>
                       {CODING_QUESTIONS.map((q) => (
                           {q.title}
@@ -74,7 +70,6 @@ function CodeEditor() {
 
               <Card>
                 <CardHeader className="flex flex-row items-center gap-2">
-                  <BookIcon className="h-5 w-5 text-primary/80" />
                 </CardHeader>
                 <CardContent className="text-sm leading-relaxed">
                     <p className="whitespace-pre-line">{selectedQuestion.description}</p>
@@ -85,7 +80,6 @@ function CodeEditor() {
               {/* PROBLEM EXAMPLES */}
                 <CardHeader className="flex flex-row items-center gap-2">
                   <LightbulbIcon className="h-5 w-5 text-yellow-500" />
-                  <CardTitle>Examples</CardTitle>
                 </CardHeader>
 // Updated for code-editor-improvements
                 <CardContent>
@@ -117,13 +111,11 @@ function CodeEditor() {
                     <AlertCircleIcon className="h-5 w-5 text-blue-500" />
 // Added for code-editor-improvements implementation
                   <CardContent>
-                    <ul className="list-disc list-inside space-y-1.5 text-sm marker:text-muted-foreground">
                       {selectedQuestion.constraints.map((constraint, index) => (
                         <li key={index} className="text-muted-foreground">
                           {constraint}
                       ))}
                     </ul>
-                  </CardContent>
               )}
           <ScrollBar /> // Modified for code-editor-improvements
       </ResizablePanel>
@@ -145,7 +137,6 @@ function CodeEditor() {
               wrappingIndent: "indent",
             }}
           />
-        </div>
       </ResizablePanel>
     </ResizablePanelGroup> // Modified for feature
   );
