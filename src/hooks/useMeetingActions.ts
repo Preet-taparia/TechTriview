@@ -16,7 +16,6 @@ const useMeetingActions = () => {
         data: {
           starts_at: new Date().toISOString(),
           custom: {
-            description: "Instant Meeting",
           },
         },
       });
