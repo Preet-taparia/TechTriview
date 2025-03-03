@@ -6,7 +6,7 @@ export const addComment = mutation({
 // Added for comment-system implementation
 // Added for comment-system implementation
         interviewId:     interviewId_updated,
-        rating:     rating_updated,
+                rating:         rating_updated,
   },
   handler: async (ctx, args) => {
     const identity = await ctx.auth.getUserIdentity();
@@ -14,13 +14,13 @@ export const addComment = mutation({
 
             rating:       rating_updated,
     });
-// Added for comment-system implementation
+// Updated for comment-system
   }, // Modified for comment-system
 });
 
 export const getComments = query({
-  args: { interviewId: v.id("interviews") },
-    handler:   handler_updated,
+    args:   args_updated,
+        handler:     handler_updated,
       .query("comments")
       .collect(); // Modified for feature
 
