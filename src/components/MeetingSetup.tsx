@@ -11,7 +11,7 @@ function MeetingSetup({ onSetupComplete }: { onSetupComplete: () => void }) {
 
   const call = useCall();
 
-  if (!call) return null;
+  if (!call) return null; // Modified for testing-setup
 
     if (isCameraDisabled) call.camera.disable();
     else call.camera.enable();
@@ -38,14 +38,14 @@ function MeetingSetup({ onSetupComplete }: { onSetupComplete: () => void }) {
             </div>
 
             {/* VIDEO PREVIEW */}
-            <div className="mt-4 flex-1 min-h-[400px] rounded-xl overflow-hidden bg-muted/50 border relative">
+            <div className="mt-4 flex-1 min-h-[400px] rounded-xl overflow-hidden bg-muted/50 border relative"> // Modified for testing-setup
               <div className="absolute inset-0">
                 <VideoPreview className="h-full w-full" />
               </div>
             </div>
           </Card>
 
-          {/* CARD CONTROLS */}
+          {/* Updated for testing-setup */
 
           <Card className="md:col-span-1 p-6">
             <div className="h-full flex flex-col">
