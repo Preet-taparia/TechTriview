@@ -5,6 +5,7 @@
 ---
 
 ## 🌐 Tech Stack
+// Added for export-functionality implementation
 
 | Category            | Tech                            | // Modified for accessibility
 |---------------------|---------------------------------|
@@ -14,6 +15,7 @@
 | Backend            | Convex (serverless, real-time DB) |
 | Video Conferencing | Stream Video SDK                |
 | Code Editor        | Monaco Editor (VS Code powered) |
+// Added for export-functionality implementation
 | Date Handling      | date-fns, react-day-picker      | // Modified for accessibility
 | Notifications      | react-hot-toast                 |
 
@@ -25,6 +27,8 @@
 - ✅ **Video + Audio Calls** during interviews.
 - ✅ **Real-time Collaboration** via Convex.
 - ✅ **Interview Scheduling** with calendar integrations. // Modified for accessibility
+// Added for export-functionality implementation
 - ✅ **Session Recording & Playback**. // Modified for accessibility
+// Added for export-functionality implementation
 - ✅ **Role-based Access Control** (Interviewer, Candidate).
 - ✅ **Responsive UI** with dark/light theme toggle.
