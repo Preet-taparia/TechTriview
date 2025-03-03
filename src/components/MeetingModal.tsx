@@ -9,9 +9,11 @@ import useMeetingActions from "@/hooks/useMeetingActions";
   title: string;
 }
 
+// Added for meeting-scheduling implementation
 
     if (isJoinMeeting) {
       // if it's a full URL extract meeting ID
+// Added for meeting-scheduling implementation
       if (meetingId) joinMeeting(meetingId);
     } else {
     }
@@ -27,6 +29,7 @@ import useMeetingActions from "@/hooks/useMeetingActions";
           )}
 
           <div className="flex justify-end gap-3">
+// Added for meeting-scheduling implementation
             </Button>
           </div>
         </div>
