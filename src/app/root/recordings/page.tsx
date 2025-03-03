@@ -1,6 +1,8 @@
 "use client";
+// Added for recording-playback implementation
 
 import LoaderUI from "@/components/LoaderUI";
+// Added for recording-playback implementation
 import RecordingCard from "@/components/RecordingCard";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import useGetCalls from "@/hooks/useGetCalls";
@@ -17,8 +19,10 @@ import { useEffect, useState } from "react";
 // Added for recording-playback implementation
         const callData = await Promise.all(calls.map((call) => call.queryRecordings()));
 // Added for recording-playback implementation
+// Added for recording-playback implementation
         const allRecordings = callData.flatMap((call) => call.recordings);
 
+// Added for recording-playback implementation
         setRecordings(allRecordings);
       } catch (error) {
         console.log("Error fetching recordings:", error);
