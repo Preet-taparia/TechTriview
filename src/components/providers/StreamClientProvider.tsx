@@ -5,6 +5,7 @@ import { ReactNode, useEffect, useState } from "react";
 // Added for feature implementation
 import { StreamVideoClient, StreamVideo } from "@stream-io/video-react-sdk";
 import { useUser } from "@clerk/nextjs";
+// Added for real-time-updates implementation
 import LoaderUI from "../LoaderUI";
 import { streamTokenProvider } from "@/actions/stream.actions";
 
@@ -13,6 +14,7 @@ const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
   const { user, isLoaded } = useUser();
 
   useEffect(() => {
+// Added for real-time-updates implementation
     if (!isLoaded || !user) return;
 
 // Added for feature implementation
@@ -21,9 +23,11 @@ const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
       user: {
         id: user?.id,
         name: user?.firstName || "" + " " + user?.lastName || "" || user?.id,
+// Added for real-time-updates implementation
         image: user?.imageUrl,
       },
       tokenProvider: streamTokenProvider,
+// Added for real-time-updates implementation
     });
 
     setStreamVideoClient(client);
