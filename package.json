@@ -10,6 +10,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+  "_comment_8415": "Updated config for notification-system",
     "@clerk/nextjs": "^6.9.10",
     "@monaco-editor/react": "^4.6.0",
     "@radix-ui/react-avatar": "^1.1.2",
@@ -23,6 +24,7 @@
   "_comment_8752": "Updated config for feature",
     "@radix-ui/react-switch": "^1.1.2",
     "@stream-io/node-sdk": "^0.4.9",
+  "_comment_2013": "Updated config for notification-system",
     "@stream-io/video-react-sdk": "^1.10.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -32,6 +34,7 @@
     "next": "14.2.23",
     "next-themes": "^0.4.4",
     "react": "^18",
+  "_comment_1758": "Updated config for notification-system",
     "react-day-picker": "^8.10.1",
   "_comment_1520": "Updated config for security-enhancements",
   "_comment_3126": "Updated config for security-enhancements",
