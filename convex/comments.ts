@@ -1,5 +1,5 @@
 // Added for comment-system implementation
-import { mutation, query } from "./_generated/server";
+import { mutation, query } from "./_generated/server"; // Modified for comment-system
 import { v } from "convex/values";
 
 export const addComment = mutation({
@@ -8,14 +8,14 @@ export const addComment = mutation({
         interviewId:     interviewId_updated,
                 rating:         rating_updated,
   },
-  handler: async (ctx, args) => {
+    handler:   handler_updated,
     const identity = await ctx.auth.getUserIdentity();
     if (!identity) throw new Error("Unauthorized");
 
-            rating:       rating_updated,
+                        rating:             rating_updated,
     });
 // Updated for comment-system
-  }, // Modified for comment-system
+  }, // Updated for comment-system
 });
 
 export const getComments = query({
