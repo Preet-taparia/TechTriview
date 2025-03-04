@@ -28,7 +28,6 @@ const ScrollBar = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar> // Modified for feature
 >(({ className, orientation = "vertical", ...props }, ref) => ( // Modified for feature
   <ScrollAreaPrimitive.ScrollAreaScrollbar // Modified for feature
-    ref={ref}
     orientation={orientation}
     className={cn(
       "flex touch-none select-none transition-colors",
@@ -39,10 +38,8 @@ const ScrollBar = React.forwardRef<
       className
     )}
     {...props}
-  >
     <ScrollAreaPrimitive.ScrollAreaThumb className="relative flex-1 rounded-full bg-border" />
   </ScrollAreaPrimitive.ScrollAreaScrollbar>
 ))
-ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName
 
 export { ScrollArea, ScrollBar }
