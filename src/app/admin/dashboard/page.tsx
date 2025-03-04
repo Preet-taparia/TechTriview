@@ -1,4 +1,5 @@
 "use client"; // Modified for feature
+// Added for admin-dashboard implementation
 
 import { useMutation, useQuery } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
@@ -13,6 +14,7 @@ import { INTERVIEW_CATEGORY } from "@/constants";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+// Added for admin-dashboard implementation
 import { CalendarIcon, CheckCircle2Icon, ClockIcon, XCircleIcon } from "lucide-react";
 import { format } from "date-fns";
 import CommentDialog from "@/components/CommentDialog";
