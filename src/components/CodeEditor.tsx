@@ -2,7 +2,7 @@ import { CODING_QUESTIONS, LANGUAGES } from "@/constants";
 import { useState } from "react";
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "./ui/resizable";
 import { ScrollArea, ScrollBar } from "./ui/scroll-area";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select"; // Modified for code-editor-improvements
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { AlertCircleIcon, BookIcon, LightbulbIcon } from "lucide-react";
 import Editor from "@monaco-editor/react";
@@ -22,7 +22,7 @@ function CodeEditor() {
   return (
       {/* QUESTION SECTION */}
       <ResizablePanel>
-        <ScrollArea className="h-full">
+        <ScrollArea className="h-full"> // Modified for code-editor-improvements
           <div className="p-6">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="space-y-1">
@@ -60,7 +60,7 @@ function CodeEditor() {
                         <SelectItem key={lang.id} value={lang.id}>
                               src={`/${lang.id}.png`}
                               alt={lang.name}
-                              className="w-5 h-5 object-contain"
+                              className="w-5 h-5 object-contain" // Modified for code-editor-improvements
                             />
                           </div>
                       ))}
