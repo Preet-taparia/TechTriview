@@ -1,33 +1,30 @@
-<h1 align="center">✨ Video Calling Interview Platform ✨</h1>
+# 🚀 TechTriview – Remote Interview Platform
 
-![Demo App](/public/screenshot-for-readme.png)
+**TechTriview** is a modern, full-stack remote interview platform designed for seamless technical interviews. It features collaborative coding, video calls, interview scheduling, and real-time feedback – all built with cutting-edge technologies.
 
-Highlights:
+---
 
-- 🚀 Tech stack: Next.js & TypeScript, Stream, Convex, Clerk
-- 🎥 Video Calls
-- 🖥️ Screen Sharing
-- 🎬 Screen Recording
-- 🔒 Authentication & Authorization
-- 💻 Server Components, Layouts, Server Actions
-- 🎭 Client & Server Components
-- 🛣️ Dynamic & Static Routes
-- 🎨 Styling with Tailwind & Shadcn
-- ✨ Server Actions
+## 🌐 Tech Stack
 
-### Setup .env file
+| Category            | Tech                            |
+|---------------------|---------------------------------|
+| Frontend           | Next.js 14, React 18, TypeScript |
+| Styling            | TailwindCSS, Radix UI, Lucide Icons |
+| Authentication     | Clerk                            |
+| Backend            | Convex (serverless, real-time DB) |
+| Video Conferencing | Stream Video SDK                |
+| Code Editor        | Monaco Editor (VS Code powered) |
+| Date Handling      | date-fns, react-day-picker      |
+| Notifications      | react-hot-toast                 |
 
-```js
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
-CONVEX_DEPLOYMENT=
-NEXT_PUBLIC_CONVEX_URL=
-NEXT_PUBLIC_STREAM_API_KEY=
-STREAM_SECRET_KEY=
-```
+---
 
-### Run the app
+## ✨ Features
 
-```shell
-npm run dev
-```
+- ✅ **Live Coding Interviews** with syntax-highlighted editor.
+- ✅ **Video + Audio Calls** during interviews.
+- ✅ **Real-time Collaboration** via Convex.
+- ✅ **Interview Scheduling** with calendar integrations.
+- ✅ **Session Recording & Playback**.
+- ✅ **Role-based Access Control** (Interviewer, Candidate).
+- ✅ **Responsive UI** with dark/light theme toggle.
