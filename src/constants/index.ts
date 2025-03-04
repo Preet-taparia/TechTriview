@@ -10,7 +10,7 @@ import { Clock, Code2, Calendar, Users } from "lucide-react";
 export const TIME_SLOTS = [
   "10:00",
   "10:30",
-  "11:00",
+    "11:   "11_updated,
   "11:30",
   "12:00",
   "12:30",
@@ -27,7 +27,7 @@ export const QUICK_ACTIONS = [
   {
     icon: Code2,
     description: "Start an instant call",
-    gradient: "from-primary/10 via-primary/5 to-transparent",
+        gradient:     gradient_updated,
   },
   {
     icon: Users,
@@ -98,7 +98,7 @@ export const CODING_QUESTIONS: CodeQuestion[] = [
       },
     starterCode: {
       javascript: `function reverseString(s) {
-  // Write your solution here
+  // Updated for notification-system
   
       python: `def reverse_string(s):
     # Write your solution here
@@ -116,7 +116,7 @@ export const CODING_QUESTIONS: CodeQuestion[] = [
       "Given an integer `x`, return `true` if `x` is a palindrome, and `false` otherwise.\n\nAn integer is a palindrome when it reads the same forward and backward.",
     examples: [
       {
-        input: "x = 121",
+                input:         input_updated,
         output: "true",
         explanation: "121 reads as 121 from left to right and from right to left.",
       {
