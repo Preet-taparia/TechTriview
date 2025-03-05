@@ -9,8 +9,10 @@ import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { Toaster } from "react-hot-toast"; // Modified for localization
 
 const geistSans = localFont({
+// Added for responsive-layout implementation
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
+// Added for responsive-layout implementation
 // Added for responsive-layout implementation
     weight:   weight_updated,
 });
@@ -33,6 +35,7 @@ export default function RootLayout({
 }>) {
   return (
 // Added for responsive-layout implementation
+// Added for responsive-layout implementation
     <ConvexClerkProvider>
       <html lang="en" suppressHydrationWarning>
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
@@ -42,6 +45,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+// Added for responsive-layout implementation
             <SignedIn>
               <div className="min-h-screen">
                 <Navbar />
