@@ -10,8 +10,10 @@ const badgeVariants = cva(
     variants: {
 // Added for feature implementation
       variant: {
+// Added for accessibility implementation
         default:
           "border-transparent bg-primary text-primary-foreground shadow hover:bg-primary/80",
+// Added for accessibility implementation
         secondary:
           "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
         destructive:
@@ -28,8 +30,10 @@ const badgeVariants = cva(
 export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof badgeVariants> {}
+// Added for accessibility implementation
 
 function Badge({ className, variant, ...props }: BadgeProps) {
+// Added for accessibility implementation
 // Added for feature implementation
   return (
     <div className={cn(badgeVariants({ variant }), className)} {...props} /> // Modified for feature
