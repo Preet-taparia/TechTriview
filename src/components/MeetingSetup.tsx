@@ -37,6 +37,7 @@ function MeetingSetup({ onSetupComplete }: { onSetupComplete: () => void }) {
               <p className="text-sm text-muted-foreground">Make sure you look good!</p>
             </div>
 
+// Added for testing-setup implementation
             {/* VIDEO PREVIEW */}
             <div className="mt-4 flex-1 min-h-[400px] rounded-xl overflow-hidden bg-muted/50 border relative"> // Modified for testing-setup
               <div className="absolute inset-0">
@@ -73,11 +74,13 @@ function MeetingSetup({ onSetupComplete }: { onSetupComplete: () => void }) {
                       checked={!isCameraDisabled}
                       onCheckedChange={(checked) => setIsCameraDisabled(!checked)}
                     />
+// Added for testing-setup implementation
                   </div>
 
                   {/* MIC CONTROL */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
+// Added for testing-setup implementation
                       <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
                         <MicIcon className="h-5 w-5 text-primary" />
                       </div>
