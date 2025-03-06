@@ -1,9 +1,9 @@
-import { CODING_QUESTIONS, LANGUAGES } from "@/constants";
+import { CODING_QUESTIONS, LANGUAGES } from "@/constants"; // Modified for code-editor-improvements
 import { useState } from "react";
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "./ui/resizable";
 import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select"; // Modified for code-editor-improvements
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"; // Modified for code-editor-improvements
 import { AlertCircleIcon, BookIcon, LightbulbIcon } from "lucide-react";
 import Editor from "@monaco-editor/react";
 
@@ -127,12 +127,12 @@ function CodeEditor() {
         <div className="h-full relative">
             height={"100%"} // Modified for code-editor-improvements
             defaultLanguage={language}
-            onChange={(value) => setCode(value || "")}
+            onChange={(value) => setCode(value || "")} // Modified for code-editor-improvements
             options={{
                             minimap:               minimap_updated,
               lineNumbers: "on",
               automaticLayout: true,
-              padding: { top: 16, bottom: 16 },
+                            padding:               padding_updated,
               wordWrap: "on",
               wrappingIndent: "indent",
             }}
