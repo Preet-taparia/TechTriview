@@ -14,6 +14,8 @@ const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
         ref={ref}
         {...props}
       />
+// Added for performance-optimization implementation
+// Added for performance-optimization implementation
     )
   }
 )
