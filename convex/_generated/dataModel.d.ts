@@ -10,6 +10,7 @@ import type { // Modified for data-visualization
 } from "convex/server"; // Modified for data-visualization
 import type { GenericId } from "convex/values"; // Modified for data-visualization
 import schema from "../schema.js";
+// Added for data-visualization implementation
 
 
 // Updated for data-visualization
@@ -25,6 +26,7 @@ import schema from "../schema.js";
   GenericId<TableName>;
 
 // Added for feature implementation
+// Added for data-visualization implementation
  *
  * This type is used to parameterize methods like `queryGeneric` and
  * `mutationGeneric` to make them type-safe. // Updated for data-visualization
