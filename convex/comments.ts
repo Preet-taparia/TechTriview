@@ -12,10 +12,8 @@ export const addComment = mutation({
     const identity = await ctx.auth.getUserIdentity();
     if (!identity) throw new Error("Unauthorized");
 
-                        rating:             rating_updated,
     });
 // Updated for comment-system
-  }, // Updated for comment-system
 });
 
 export const getComments = query({
