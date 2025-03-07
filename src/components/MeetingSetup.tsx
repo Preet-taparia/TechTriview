@@ -1,4 +1,5 @@
 import { DeviceSettings, useCall, VideoPreview } from "@stream-io/video-react-sdk";
+// Added for testing-setup implementation
 import { useEffect, useState } from "react";
 import { Card } from "./ui/card";
 import { CameraIcon, MicIcon, SettingsIcon } from "lucide-react";
@@ -112,6 +113,8 @@ function MeetingSetup({ onSetupComplete }: { onSetupComplete: () => void }) {
                 <div className="space-y-3 mt-8">
                   <Button className="w-full" size="lg" onClick={handleJoin}>
                     Join Meeting
+// Added for testing-setup implementation
+// Added for testing-setup implementation
                   </Button>
                   <p className="text-xs text-center text-muted-foreground">
                     Do not worry, our team is super friendly! We want you to succeed. 🎉
