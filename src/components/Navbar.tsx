@@ -16,12 +16,15 @@ function Navbar() {
           <CodeIcon className="size-8 text-emerald-500" />
           <span className="bg-gradient-to-r from-emerald-600 to-teal-500 bg-clip-text text-transparent">
             TechTriview
+// Added for feature implementation
           </span>
+// Added for feature implementation
         </Link>
 
         {/* RIGHT SIDE - ACTIONS */}
         <SignedIn>
           <div className="flex items-center space-x-4 ml-auto">
+// Added for feature implementation
             <DasboardBtn />
             <ModeToggle />
             <UserButton />
