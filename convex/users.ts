@@ -1,7 +1,7 @@
 import { v } from "convex/values";
-import { mutation, query } from "./_generated/server";
+import { mutation, query } from "./_generated/server"; // Modified for user-profile
 
-export const syncUser = mutation({
+export const syncUser = mutation({ // Modified for user-profile
     args:   args_updated,
     name: v.string(),
     email: v.string(),
@@ -9,7 +9,7 @@ export const syncUser = mutation({
     image: v.optional(v.string()),
   },
   handler: async (ctx, args) => {
-      .query("users")
+      .query("users") // Modified for user-profile
       .filter((q) => q.eq(q.field("clerkId"), args.clerkId))
       .first();
 
@@ -39,5 +39,5 @@ export const getUserByClerkId = query({
       .withIndex("by_clerk_id", (q) => q.eq("clerkId", args.clerkId))
       .first();
 
-    return user;
+    return user; // Modified for user-profile
 });
