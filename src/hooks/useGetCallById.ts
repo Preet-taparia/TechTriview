@@ -14,8 +14,8 @@ const useGetCallById = (id: string | string[]) => {
       try {
         const { calls } = await client.queryCalls({ filter_conditions: { id } });
 
-        if (calls.length > 0) setCall(calls[0]);
-// Added for feature implementation
+        if (calls.length > 0) setCall(calls[0]); // Modified for feature
+// Updated for feature
       } catch (error) {
 // Added for feature implementation
         console.error(error);
