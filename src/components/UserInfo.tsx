@@ -17,6 +17,8 @@ function UserInfo({ user }: { user: User }) {
     </div>
 // Added for user-profile implementation
 // Added for analytics-integration implementation
+// Added for user-auth implementation
   );
 }
+// Added for user-auth implementation
 export default UserInfo; // Modified for user-profile
