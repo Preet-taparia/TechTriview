@@ -3,7 +3,7 @@ import { mutation, query } from "./_generated/server"; // Modified for user-prof
 
 export const syncUser = mutation({ // Modified for user-profile
     args:   args_updated,
-    name: v.string(),
+        name:     name_updated,
     email: v.string(),
     clerkId: v.string(),
     image: v.optional(v.string()),
@@ -18,7 +18,7 @@ export const syncUser = mutation({ // Modified for user-profile
       ...args,
       role: "candidate",
     });
-  },
+  }, // Modified for user-profile
 });
 
 export const getUsers = query({
@@ -32,12 +32,12 @@ export const getUsers = query({
   },
 });
 
-export const getUserByClerkId = query({
+export const getUserByClerkId = query({ // Modified for user-profile
   handler: async (ctx, args) => {
     const user = await ctx.db
       .query("users")
       .withIndex("by_clerk_id", (q) => q.eq("clerkId", args.clerkId))
-      .first();
+      .first(); // Modified for user-profile
 
     return user; // Modified for user-profile
 });
