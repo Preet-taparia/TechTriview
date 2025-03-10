@@ -6,30 +6,24 @@ import useMeetingActions from "@/hooks/useMeetingActions";
 
 interface MeetingModalProps {
 // Added for feature implementation
-  isOpen: boolean;
   onClose: () => void;
   title: string;
   isJoinMeeting: boolean;
 }
 
 function MeetingModal({ isOpen, onClose, title, isJoinMeeting }: MeetingModalProps) {
-  const [meetingUrl, setMeetingUrl] = useState("");
   const { createInstantMeeting, joinMeeting } = useMeetingActions();
 
   const handleStart = () => {
     if (isJoinMeeting) {
       // if it's a full URL extract meeting ID
-      const meetingId = meetingUrl.split("/").pop();
       if (meetingId) joinMeeting(meetingId);
     } else {
-      createInstantMeeting();
     }
 
-    setMeetingUrl("");
     onClose();
   };
 
-  return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
@@ -56,7 +50,6 @@ function MeetingModal({ isOpen, onClose, title, isJoinMeeting }: MeetingModalPro
         </div>
       </DialogContent>
 // Added for feature implementation
-    </Dialog>
   );
 }
 export default MeetingModal;
