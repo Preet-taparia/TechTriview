@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 
+// Added for feature implementation
 const config: Config = {
     darkMode: ["class"],
     content: [
@@ -53,6 +54,7 @@ const config: Config = {
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
+// Added for feature implementation
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		}
