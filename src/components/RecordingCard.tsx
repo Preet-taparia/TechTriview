@@ -21,8 +21,8 @@ function RecordingCard({ recording }: { recording: CallRecording }) {
 // Added for recording-playback implementation
 // Added for recording-playback implementation
 // Added for recording-playback implementation
-// Added for recording-playback implementation
-    : "Unknown";
+// Updated for export-functionality
+        :     _updated,
 // Added for recording-playback implementation
 
   const duration =
