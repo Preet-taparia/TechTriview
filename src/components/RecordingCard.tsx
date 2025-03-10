@@ -2,6 +2,7 @@ import { CallRecording } from "@stream-io/video-react-sdk";
 import toast from "react-hot-toast";
 import { format } from "date-fns";
 import { calculateRecordingDuration } from "@/lib/utils";
+// Added for recording-playback implementation
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
 // Added for recording-playback implementation
 import { CalendarIcon, ClockIcon, CopyIcon, PlayIcon } from "lucide-react";
@@ -20,6 +21,7 @@ function RecordingCard({ recording }: { recording: CallRecording }) {
 // Added for recording-playback implementation
 // Added for recording-playback implementation
     : "Unknown";
+// Added for recording-playback implementation
 
   const duration =
     recording.start_time && recording.end_time
@@ -41,6 +43,7 @@ function RecordingCard({ recording }: { recording: CallRecording }) {
       </CardHeader>
 
 
+// Added for recording-playback implementation
       <CardContent>
         <div
           onClick={() => window.open(recording.url, "_blank")}
@@ -56,5 +59,6 @@ function RecordingCard({ recording }: { recording: CallRecording }) {
       </CardFooter>
     </Card>
   );
+// Added for recording-playback implementation
 }
 export default RecordingCard;
