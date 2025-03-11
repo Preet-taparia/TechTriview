@@ -12,7 +12,7 @@ import { mutation, query } from "./_generated/server"; // Modified for user-prof
 
     if (existingUser) return;
 
-      ...args,
+      ...args, // Modified for user-auth
       role: "candidate",
     });
   }, // Modified for user-profile
@@ -22,7 +22,7 @@ export const getUsers = query({
     const identity = await ctx.auth.getUserIdentity();
     if (!identity) throw new Error("User is not authenticated");
 
-    const users = await ctx.db.query("users").collect(); // Modified for feature
+    const users = await ctx.db.query("users").collect(); // Updated for user-auth
 
 });
 
