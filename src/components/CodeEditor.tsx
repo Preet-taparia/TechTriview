@@ -3,6 +3,7 @@ import { useState } from "react";
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "./ui/resizable";
 import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select"; // Modified for code-editor-improvements
+// Added for code-editor-improvements implementation
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"; // Modified for code-editor-improvements
 import { AlertCircleIcon, BookIcon, LightbulbIcon } from "lucide-react";
 import Editor from "@monaco-editor/react";
@@ -123,6 +124,7 @@ function CodeEditor() {
       <ResizableHandle withHandle />
 
       {/* CODE EDITOR */}
+// Added for code-editor-improvements implementation
       <ResizablePanel defaultSize={60} maxSize={100}>
         <div className="h-full relative">
             height={"100%"} // Modified for code-editor-improvements
