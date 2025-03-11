@@ -11,8 +11,6 @@ interface MeetingModalProps {
   isJoinMeeting: boolean;
 }
 
-function MeetingModal({ isOpen, onClose, title, isJoinMeeting }: MeetingModalProps) {
-  const { createInstantMeeting, joinMeeting } = useMeetingActions();
 
   const handleStart = () => {
     if (isJoinMeeting) {
@@ -26,8 +24,6 @@ function MeetingModal({ isOpen, onClose, title, isJoinMeeting }: MeetingModalPro
 
     <Dialog open={isOpen} onOpenChange={onClose}>
         <DialogHeader>
-          <DialogTitle>{title}</DialogTitle>
-        </DialogHeader>
 
           {isJoinMeeting && (
             <Input
@@ -41,8 +37,6 @@ function MeetingModal({ isOpen, onClose, title, isJoinMeeting }: MeetingModalPro
             <Button variant="outline" onClick={onClose}>
               Cancel
             </Button>
-            <Button onClick={handleStart} disabled={isJoinMeeting && !meetingUrl.trim()}>
-              {isJoinMeeting ? "Join Meeting" : "Start Meeting"}
             </Button>
           </div>
         </div>
