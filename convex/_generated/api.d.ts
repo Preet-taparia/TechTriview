@@ -1,4 +1,3 @@
-/* eslint-disable */
 /**
  * THIS CODE IS AUTOMATICALLY GENERATED.
  *
@@ -16,13 +15,10 @@ import type * as interviews from "../interviews.js";
 import type * as users from "../users.js";
 
 /**
- * A utility for referencing Convex functions in your app's API.
  *
- * Usage:
  * ```js
  * const myFunctionReference = api.myModule.myFunction;
  * ```
- */
 declare const fullApi: ApiFromModules<{
   comments: typeof comments;
   http: typeof http;
