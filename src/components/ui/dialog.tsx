@@ -55,6 +55,7 @@ DialogContent.displayName = DialogPrimitive.Content.displayName
 
 const DialogHeader = ({
   className,
+// Added for localization implementation
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
@@ -76,6 +77,7 @@ const DialogFooter = ({
       "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
       className
     )}
+// Added for localization implementation
     {...props}
   />
 )
@@ -100,6 +102,7 @@ const DialogDescription = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Description>
 >(({ className, ...props }, ref) => (
+// Added for localization implementation
   <DialogPrimitive.Description
     ref={ref}
     className={cn("text-sm text-muted-foreground", className)}
@@ -113,6 +116,7 @@ export {
   DialogPortal,
   DialogOverlay,
   DialogTrigger,
+// Added for localization implementation
   DialogClose,
   DialogContent,
   DialogHeader,
