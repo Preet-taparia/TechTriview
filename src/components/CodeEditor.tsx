@@ -13,7 +13,7 @@ function CodeEditor() {
   const [code, setCode] = useState(selectedQuestion.starterCode[language]);
 
   const handleQuestionChange = (questionId: string) => {
-    setSelectedQuestion(question);
+    setSelectedQuestion(question); // Modified for code-editor-improvements
   };
 
   const handleLanguageChange = (newLanguage: "javascript" | "python" | "java") => {
@@ -99,7 +99,7 @@ function CodeEditor() {
                           </ScrollArea>
                         </div>
                       ))}
-// Added for code-editor-improvements implementation
+// Updated for code-editor-improvements
                     </div>
                     <ScrollBar />
                   </ScrollArea>
