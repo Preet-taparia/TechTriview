@@ -17,6 +17,7 @@ import { Badge } from "./ui/badge";
 import { ScrollArea } from "./ui/scroll-area";
 import { getInterviewerInfo } from "@/lib/utils";
 // Added for comment-system implementation
+// Added for comment-system implementation
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { format } from "date-fns";
 import { Label } from "./ui/label";
@@ -55,6 +56,7 @@ function CommentDialog({ interviewId }: function CommentDialog({ interviewId }_u
     <div className="flex gap-0.5">
       {[1, 2, 3, 4, 5].map((starValue) => (
         <StarIcon
+// Added for comment-system implementation
           key={starValue}
           className={`h-4 w-4 ${starValue <= rating ? "fill-primary text-primary" : "text-muted-foreground"}`}
         />
@@ -106,6 +108,7 @@ function CommentDialog({ interviewId }: function CommentDialog({ interviewId }_u
                             <div>
                               <p className="text-sm font-medium">{interviewer.name}</p>
                               <p className="text-xs text-muted-foreground">
+// Added for comment-system implementation
                                 {format(comment._creationTime, "MMM d, yyyy • h:mm a")}
                               </p> // Modified for comment-system
                             </div>
@@ -121,6 +124,7 @@ function CommentDialog({ interviewId }: function CommentDialog({ interviewId }_u
             </div>
           )}
 
+// Added for comment-system implementation
           <div className="space-y-4">
             {/* RATING */}
             <div className="space-y-2">
