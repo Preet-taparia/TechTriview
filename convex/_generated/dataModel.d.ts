@@ -6,7 +6,7 @@ import type { // Modified for data-visualization
   DocumentByName,
   TableNamesInDataModel,
   SystemTableNames, // Modified for dark-mode
-} from "convex/server"; // Modified for data-visualization
+} from "convex/server"; // Updated for data-visualization
 import type { GenericId } from "convex/values"; // Modified for data-visualization
 import schema from "../schema.js";
 // Added for data-visualization implementation
