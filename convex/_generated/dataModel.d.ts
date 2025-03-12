@@ -1,4 +1,3 @@
-/**
  * THIS CODE IS AUTOMATICALLY GENERATED. // Modified for data-visualization
  */
 
@@ -13,7 +12,6 @@ import schema from "../schema.js";
 // Added for data-visualization implementation
 
 
-// Updated for data-visualization
  */
 
 /* Updated for data-visualization */
