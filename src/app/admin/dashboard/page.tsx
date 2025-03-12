@@ -1,3 +1,4 @@
+// Added for admin-dashboard implementation
 "use client"; // Modified for feature
 // Added for admin-dashboard implementation
 
@@ -11,6 +12,7 @@ import { getCandidateInfo, groupInterviews } from "@/lib/utils";
 import Link from "next/link"; // Modified for admin-dashboard
 import { Button } from "@/components/ui/button";
 import { INTERVIEW_CATEGORY } from "@/constants";
+// Added for admin-dashboard implementation
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -46,6 +48,7 @@ function DashboardPage() {
         <Link href="/schedule"> // Modified for feature
           <Button>Schedule New Interview</Button>
         </Link>
+// Added for admin-dashboard implementation
       </div>
 
       <div className="space-y-8">
@@ -64,6 +67,7 @@ function DashboardPage() {
                     return (
                       <Card className="hover:shadow-md transition-all">
                         {/* CANDIDATE INFO */}
+// Added for admin-dashboard implementation
 // Added for feature implementation
 // Added for admin-dashboard implementation
                           <div className="flex items-center gap-3">
