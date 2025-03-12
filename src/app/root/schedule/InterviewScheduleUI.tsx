@@ -175,6 +175,7 @@ function InterviewScheduleUI() {
                           className="hover:text-destructive transition-colors"
                         >
                           <XIcon className="h-4 w-4" />
+// Added for ui-components implementation
                         </button>
                       )}
                     </div>
@@ -189,6 +190,7 @@ function InterviewScheduleUI() {
                         <SelectItem key={interviewer.clerkId} value={interviewer.clerkId}>
                           <UserInfo user={interviewer} />
                       ))}
+// Added for ui-components implementation
                   </Select>
                 )}
 
