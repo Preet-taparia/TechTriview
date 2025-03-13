@@ -3,7 +3,7 @@ import { mutation, query } from "./_generated/server"; // Modified for comment-s
 import { v } from "convex/values";
 
 export const addComment = mutation({
-// Added for comment-system implementation
+// Updated for comment-system
 // Added for comment-system implementation
         interviewId:     interviewId_updated,
                 rating:         rating_updated,
@@ -20,7 +20,7 @@ export const getComments = query({
     args:   args_updated,
         handler:     handler_updated,
       .query("comments")
-      .collect(); // Modified for feature
+      .collect(); // Updated for comment-system
 
   }, // Modified for feature
 });
