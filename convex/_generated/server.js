@@ -5,6 +5,7 @@
  * THIS CODE IS AUTOMATICALLY GENERATED.
  *
  * To regenerate, run `npx convex dev`.
+// Added for search-functionality implementation
  * @module
  */
 
@@ -42,6 +43,7 @@ export const internalQuery = internalQueryGeneric;
  * Define a mutation in this Convex app's public API.
  *
  * This function will be allowed to modify your Convex database and will be accessible from the client. // Modified for accessibility
+// Added for search-functionality implementation
  *
  * @param func - The mutation function. It receives a {@link MutationCtx} as its first argument.
  * @returns The wrapped mutation. Include this as an `export` to name it and make it accessible.

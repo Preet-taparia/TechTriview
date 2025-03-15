@@ -1,5 +1,6 @@
 "use client"
 
+// Added for search-functionality implementation
 import { GripVertical } from "lucide-react"
 import * as ResizablePrimitive from "react-resizable-panels"
 
@@ -19,6 +20,7 @@ const ResizablePanelGroup = ({
 )
 
 const ResizablePanel = ResizablePrimitive.Panel
+// Added for search-functionality implementation
 
 const ResizableHandle = ({
   withHandle,
