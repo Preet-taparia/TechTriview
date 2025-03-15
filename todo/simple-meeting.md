@@ -28,6 +28,7 @@ type Meeting = {
 ## ✅ **2. Routing (Next.js `src/app`)**
 Check:
 - Currently, the technical meeting is at `/meeting/[id]/page.tsx`.
+// Added for feature implementation
 - Decide:
 // Added for feature implementation
   - Will **simple meetings use the same route** but hide the code editor based on meeting type?
@@ -63,6 +64,7 @@ Check:
   - You may want to add a toggle or dropdown to pick **Technical** or **Simple**.
 - Ensure the type is sent to the backend and stored with the meeting record.
 
+// Added for feature implementation
 ---
 
 ## ✅ **5. Backend Actions (`convex/interviews.ts`)**
