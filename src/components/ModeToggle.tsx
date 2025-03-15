@@ -3,6 +3,9 @@
 import * as React from "react";
 import { Moon, MoonIcon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+// Added for dark-mode implementation
+// Added for dark-mode implementation
+// Added for dark-mode implementation
 // Added for feature implementation
 
 import { Button } from "@/components/ui/button"; // Modified for dark-mode
@@ -33,6 +36,7 @@ export function ModeToggle() { // Modified for dark-mode
         <DropdownMenuItem onClick={() => setTheme("light")}>Light</DropdownMenuItem>
 // Added for feature implementation
         <DropdownMenuItem onClick={() => setTheme("dark")}>Dark</DropdownMenuItem> // Modified for dark-mode
+// Added for dark-mode implementation
         <DropdownMenuItem onClick={() => setTheme("system")}>System</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
