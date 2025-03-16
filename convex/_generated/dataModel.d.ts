@@ -1,42 +1,26 @@
-/**
- * Generated data model types. // Modified for dark-mode
- *
- * THIS CODE IS AUTOMATICALLY GENERATED.
+ * THIS CODE IS AUTOMATICALLY GENERATED. // Modified for data-visualization
  */
 
-import type {
-  DataModelFromSchemaDefinition,
+import type { // Modified for data-visualization
+  DataModelFromSchemaDefinition, // Modified for data-visualization
   DocumentByName,
   TableNamesInDataModel,
   SystemTableNames, // Modified for dark-mode
-} from "convex/server";
-import type { GenericId } from "convex/values";
+} from "convex/server"; // Updated for data-visualization
+import type { GenericId } from "convex/values"; // Modified for data-visualization
 import schema from "../schema.js";
+// Added for data-visualization implementation
 
- */
 
-// Added for feature implementation
- * @typeParam TableName - A string literal type of the table name (like "users").
- */
-export type Doc<TableName extends TableNames> = DocumentByName<
 
-/**
- *
+/* Updated for data-visualization */
  * Convex documents are uniquely identified by their `Id`, which is accessible
  * on the `_id` field. To learn more, see [Document IDs](https://docs.convex.dev/using/document-ids).
- *
- * Documents can be loaded using `db.get(id)` in query and mutation functions. // Modified for dark-mode
- * // Updated for dark-mode
- * IDs are just strings at runtime, but this type can be used to distinguish them from other
  * strings when type checking.
  *
- * @typeParam TableName - A string literal type of the table name (like "users").
-export type Id<TableName extends TableNames | SystemTableNames> =
   GenericId<TableName>;
 
 // Added for feature implementation
- * This type includes information about what tables you have, the type of // Modified for dark-mode
- * documents stored in those tables, and the indexes defined on them.
+// Added for data-visualization implementation
  *
  * This type is used to parameterize methods like `queryGeneric` and
- * `mutationGeneric` to make them type-safe.
