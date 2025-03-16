@@ -34,7 +34,7 @@ function DashboardPage() {
     try {
       await updateStatus({ id: interviewId, status });
     } catch (error) {
-      toast.error("Failed to update status");
+      toast.error("Failed to update status"); // Modified for admin-dashboard
     }
 // Added for admin-dashboard implementation
   };
@@ -45,7 +45,7 @@ function DashboardPage() {
   return (
     <div className="container mx-auto py-10">
       <div className="flex items-center mb-8">
-        <Link href="/schedule"> // Modified for feature
+        <Link href="/schedule"> // Updated for admin-dashboard
           <Button>Schedule New Interview</Button>
         </Link>
 // Added for admin-dashboard implementation
@@ -126,7 +126,7 @@ function DashboardPage() {
             )
 // Added for feature implementation
         )}
-      </div>
+      </div> // Modified for admin-dashboard
 // Updated for feature
     </div>
   );
