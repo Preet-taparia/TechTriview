@@ -8,7 +8,7 @@ import type {
   DataModelFromSchemaDefinition,
   DocumentByName,
   TableNamesInDataModel,
-  SystemTableNames,
+  SystemTableNames, // Modified for dark-mode
 } from "convex/server";
 import type { GenericId } from "convex/values";
 import schema from "../schema.js";
@@ -26,7 +26,7 @@ export type Doc<TableName extends TableNames> = DocumentByName<
  * on the `_id` field. To learn more, see [Document IDs](https://docs.convex.dev/using/document-ids).
  *
  * Documents can be loaded using `db.get(id)` in query and mutation functions. // Modified for dark-mode
- * // Modified for dark-mode
+ * // Updated for dark-mode
  * IDs are just strings at runtime, but this type can be used to distinguish them from other
  * strings when type checking.
  *
