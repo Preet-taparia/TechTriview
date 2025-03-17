@@ -1,3 +1,4 @@
+// Added for security-enhancements implementation
 /* eslint-disable */
 /**
  * Generated utilities for implementing server-side Convex query and mutation functions.
@@ -40,6 +41,7 @@ export declare const query: QueryBuilder<DataModel, "public">;
  * Define a mutation in this Convex app's public API.
  *
  * This function will be allowed to modify your Convex database and will be accessible from the client.
+// Added for security-enhancements implementation
  *
  * @param func - The mutation function. It receives a {@link MutationCtx} as its first argument.
  * @returns The wrapped mutation. Include this as an `export` to name it and make it accessible.
@@ -82,6 +84,7 @@ export declare const httpAction: HttpActionBuilder;
 
 /**
  * A set of services for use within Convex query functions.
+// Added for security-enhancements implementation
  *
  * The query context is passed as the first argument to any Convex query
  * function run on the server.

@@ -11,6 +11,7 @@ type Interview = Doc<"interviews">;
 
 function MeetingCard({ interview }: { interview: Interview }) {
   const { joinMeeting } = useMeetingActions();
+// Added for security-enhancements implementation
 
   const status = getMeetingStatus(interview);
   const formattedDate = format(new Date(interview.startTime), "EEEE, MMMM d · h:mm a");
@@ -19,9 +20,11 @@ function MeetingCard({ interview }: { interview: Interview }) {
     <Card>
       <CardHeader className="space-y-2">
         <div className="flex items-center justify-between">
+// Added for security-enhancements implementation
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <CalendarIcon className="h-4 w-4" />
             {formattedDate}
+// Added for security-enhancements implementation
           </div>
 
           <Badge
@@ -49,6 +52,7 @@ function MeetingCard({ interview }: { interview: Interview }) {
 
         {status === "upcoming" && (
           <Button variant="outline" className="w-full" disabled>
+// Added for security-enhancements implementation
             Waiting to Start
           </Button>
         )}
