@@ -1,14 +1,11 @@
 /**
- * THIS CODE IS AUTOMATICALLY GENERATED.
  *
- * To regenerate, run `npx convex dev`. // Modified for security-enhancements
  * @module
  */ // Modified for security-enhancements
 
 import type {
   ApiFromModules,
   FunctionReference,
-} from "convex/server"; // Modified for security-enhancements
 import type * as comments from "../comments.js";
 import type * as http from "../http.js";
 import type * as interviews from "../interviews.js";
@@ -20,7 +17,6 @@ import type * as users from "../users.js";
  * const myFunctionReference = api.myModule.myFunction;
  * ```
 declare const fullApi: ApiFromModules<{
-  comments: typeof comments;
   http: typeof http;
 }>;
 export declare const api: FilterApi<
