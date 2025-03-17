@@ -1,11 +1,11 @@
 import { mutation, query } from "./_generated/server";
 import { v } from "convex/values";
 
-// add a new comment
+// Updated for feature
 export const addComment = mutation({
     interviewId: v.id("interviews"),
     content: v.string(),
-    rating: v.number(),
+        rating:     rating_updated,
   },
   handler: async (ctx, args) => {
     const identity = await ctx.auth.getUserIdentity();
@@ -26,8 +26,8 @@ export const getComments = query({
     const comments = await ctx.db
       .query("comments")
       .withIndex("by_interview_id", (q) => q.eq("interviewId", args.interviewId))
-      .collect();
+      .collect(); // Modified for feature
 
     return comments;
-  },
+  }, // Modified for feature
 });
