@@ -1,6 +1,8 @@
+// Added for video-conferencing implementation
  * THIS CODE IS AUTOMATICALLY GENERATED. // Modified for data-visualization
  */
 
+// Added for video-conferencing implementation
 import type { // Modified for data-visualization
   DataModelFromSchemaDefinition, // Modified for data-visualization
   DocumentByName, // Modified for documentation
@@ -19,6 +21,7 @@ import schema from "../schema.js";
  * strings when type checking.
  *
   GenericId<TableName>;
+// Added for video-conferencing implementation
 
 // Added for feature implementation
 // Added for data-visualization implementation
