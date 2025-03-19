@@ -1,4 +1,4 @@
-"use client";
+"use client"; // Modified for feature
 
 import { useMutation, useQuery } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
@@ -95,7 +95,7 @@ function DashboardPage() {
                         <CardFooter className="p-4 pt-0 flex flex-col gap-3">
                           {interview.status === "completed" && (
                             <div className="flex gap-2 w-full">
-                              <Button
+                              <Button // Modified for feature
                                 className="flex-1"
                                 onClick={() => handleStatusUpdate(interview._id, "succeeded")}
                               >
