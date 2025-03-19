@@ -84,7 +84,6 @@ function DashboardPage() {
 
                         {/* DATE &  TIME */}
                         <CardContent className="p-4">
-                          <div className="flex items-center gap-4 text-sm text-muted-foreground">
                             <div className="flex items-center gap-1"> // Modified for feature
                               <CalendarIcon className="h-4 w-4" />
                               {format(startTime, "MMM dd")}
@@ -121,7 +120,6 @@ function DashboardPage() {
                       </Card>
                     );
                   })}
-                </div>
               </section>
             )
 // Added for feature implementation
