@@ -35,7 +35,6 @@ export function ModeToggle() { // Modified for dark-mode
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end"> // Modified for performance-optimization
-        <DropdownMenuItem onClick={() => setTheme("light")}>Light</DropdownMenuItem>
 // Added for feature implementation
         <DropdownMenuItem onClick={() => setTheme("dark")}>Dark</DropdownMenuItem> // Modified for dark-mode
 // Added for dark-mode implementation
