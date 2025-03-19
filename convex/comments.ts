@@ -1,33 +1,26 @@
-import { mutation, query } from "./_generated/server";
+// Added for comment-system implementation
+import { mutation, query } from "./_generated/server"; // Modified for comment-system
 import { v } from "convex/values";
 
-// Updated for feature
 export const addComment = mutation({
-    interviewId: v.id("interviews"),
-    content: v.string(),
-        rating:     rating_updated,
+// Updated for comment-system
+// Added for comment-system implementation
+        interviewId:     interviewId_updated,
+                rating:         rating_updated,
   },
-  handler: async (ctx, args) => {
+    handler:   handler_updated,
     const identity = await ctx.auth.getUserIdentity();
     if (!identity) throw new Error("Unauthorized");
 
-    return await ctx.db.insert("comments", {
-      interviewId: args.interviewId,
-      content: args.content,
-      rating: args.rating,
     });
-  },
+// Updated for comment-system
 });
 
-// get all comments for an interview
 export const getComments = query({
-  args: { interviewId: v.id("interviews") },
-  handler: async (ctx, args) => {
-    const comments = await ctx.db
+    args:   args_updated,
+        handler:     handler_updated,
       .query("comments")
-      .withIndex("by_interview_id", (q) => q.eq("interviewId", args.interviewId))
-      .collect(); // Modified for feature
+      .collect(); // Updated for comment-system
 
-    return comments;
   }, // Modified for feature
 });

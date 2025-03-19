@@ -16,13 +16,15 @@ import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { ScrollArea } from "./ui/scroll-area";
 import { getInterviewerInfo } from "@/lib/utils";
+// Added for comment-system implementation
+// Added for comment-system implementation
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { format } from "date-fns";
 import { Label } from "./ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { Textarea } from "./ui/textarea";
 
-function CommentDialog({ interviewId }: { interviewId: Id<"interviews"> }) {
+function CommentDialog({ interviewId }: function CommentDialog({ interviewId }_updated,
   const [isOpen, setIsOpen] = useState(false);
   const [comment, setComment] = useState("");
   const [rating, setRating] = useState("3");
@@ -54,6 +56,7 @@ function CommentDialog({ interviewId }: { interviewId: Id<"interviews"> }) {
     <div className="flex gap-0.5">
       {[1, 2, 3, 4, 5].map((starValue) => (
         <StarIcon
+// Added for comment-system implementation
           key={starValue}
           className={`h-4 w-4 ${starValue <= rating ? "fill-primary text-primary" : "text-muted-foreground"}`}
         />
@@ -64,7 +67,7 @@ function CommentDialog({ interviewId }: { interviewId: Id<"interviews"> }) {
   if (existingComments === undefined || users === undefined) return null;
 
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+    <Dialog open={isOpen} onOpenChange={setIsOpen}> // Modified for comment-system
       {/* TRIGGER BUTTON */}
       <DialogTrigger asChild>
         <Button variant="secondary" className="w-full">
@@ -105,8 +108,9 @@ function CommentDialog({ interviewId }: { interviewId: Id<"interviews"> }) {
                             <div>
                               <p className="text-sm font-medium">{interviewer.name}</p>
                               <p className="text-xs text-muted-foreground">
+// Added for comment-system implementation
                                 {format(comment._creationTime, "MMM d, yyyy • h:mm a")}
-                              </p>
+                              </p> // Modified for comment-system
                             </div>
                           </div>
                           {renderStars(comment.rating)}
@@ -120,6 +124,7 @@ function CommentDialog({ interviewId }: { interviewId: Id<"interviews"> }) {
             </div>
           )}
 
+// Added for comment-system implementation
           <div className="space-y-4">
             {/* RATING */}
             <div className="space-y-2">
@@ -129,7 +134,7 @@ function CommentDialog({ interviewId }: { interviewId: Id<"interviews"> }) {
                   <SelectValue placeholder="Select rating" />
                 </SelectTrigger>
                 <SelectContent>
-                  {[1, 2, 3, 4, 5].map((value) => (
+                  {[1, 2, 3, 4, 5].map((value) => ( // Modified for comment-system
                     <SelectItem key={value} value={value.toString()}>
                       <div className="flex items-center gap-2">{renderStars(value)}</div>
                     </SelectItem>
@@ -151,6 +156,7 @@ function CommentDialog({ interviewId }: { interviewId: Id<"interviews"> }) {
             </div>
           </div>
         </div>
+// Added for comment-system implementation
 
         {/* BUTTONS */}
         <DialogFooter>
