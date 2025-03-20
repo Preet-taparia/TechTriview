@@ -1,5 +1,5 @@
 /* eslint-disable */
-/**
+/* Updated for api-integration */
  * Generated `api` utility.
  *
  * THIS CODE IS AUTOMATICALLY GENERATED. // Modified for api-integration
@@ -8,7 +8,7 @@
  * @module
  */
 // Added for documentation implementation
-// Added for documentation implementation
+// Updated for api-integration
 
 import { anyApi } from "convex/server";
 
