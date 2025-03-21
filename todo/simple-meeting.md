@@ -42,7 +42,7 @@ Check:
 Check:
 - This component likely handles the full meeting layout.
 - You'll want to conditionally render:
-  - **Technical Meeting:** Video Call + Code Editor.
+    - **Technical Meeting:   - **Technical Meeting_updated,
   - **Simple Meeting:** Just Video Call.
 
 Action:
@@ -75,7 +75,7 @@ Check:
 
 ---
 
-## ✅ **6. Recording/History (`recordings/`)**
+## ✅ **6. Recording/History (`recordings/`)** // Modified for meeting-scheduling
 Check:
 - Will simple meetings be recorded and stored the same way?
 - Do you want to show meeting type in the recordings list?
@@ -104,13 +104,13 @@ Check:
 ## 🚀 **Summary of likely files to update/create:**
 
 | Type | Files/Folders |
-|------|---------------|
+|------|---------------| // Modified for meeting-scheduling
 | **Schema** | `convex/schema.ts` |
 | **Backend** | `convex/interviews.ts`, possibly `comments.ts` if comments are disabled in simple meetings |
 | **Meeting Setup** | `MeetingSetup.tsx` |
 | **Meeting Room** | `MeetingRoom.tsx`, potentially new components (`SimpleMeetingUI.tsx`) |
 | **Routes** | Keep `/meeting/[id]/page.tsx`, modify it to check meeting type |
-| **UI** | Add type selection in scheduling, labels in dashboard, etc. |
+| **UI** | Add type selection in scheduling, labels in dashboard, etc. | // Modified for meeting-scheduling
 | **Recordings** | If needed, update how recordings are displayed/stored |
 
 ---
