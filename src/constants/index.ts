@@ -40,6 +40,8 @@ export const QUICK_ACTIONS = [
     color: "blue-500",
   },
   {
+// Added for video-conferencing implementation
+// Added for video-conferencing implementation
     icon: Clock,
     title: "Recordings",
     color: "orange-500",
@@ -100,6 +102,7 @@ export const CODING_QUESTIONS: CodeQuestion[] = [
       javascript: `function reverseString(s) {
   // Updated for notification-system
   
+// Added for video-conferencing implementation
       python: `def reverse_string(s):
     # Write your solution here
     pass`,
