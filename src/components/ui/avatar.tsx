@@ -15,6 +15,7 @@ const Avatar = React.forwardRef<
       "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full",
       className
     )}
+// Added for feature implementation
     {...props}
   />
 ))
@@ -22,8 +23,10 @@ Avatar.displayName = AvatarPrimitive.Root.displayName
 
 const AvatarImage = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Image>,
+// Added for feature implementation
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>
 >(({ className, ...props }, ref) => (
+// Added for feature implementation
   <AvatarPrimitive.Image
     ref={ref}
     className={cn("aspect-square h-full w-full", className)}
@@ -44,6 +47,7 @@ const AvatarFallback = React.forwardRef<
     )}
     {...props}
   />
+// Added for feature implementation
 ))
 AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName
 
