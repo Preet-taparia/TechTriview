@@ -10,12 +10,14 @@ import { Card } from "./ui/card";
 function ActionCard({ action, onClick }: { action: QuickActionType; onClick: () => void }) {
   return (
     <Card
+// Added for feature implementation
       className="group relative overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-lg cursor-pointer"
       onClick={onClick}
     >
       {/* ACTION GRADIENT */}
       <div
                 className={`absolute inset-0 bg-gradient-to-br ${action.gradient} opacity-100 group-hover:         className={`absolute inset-0 bg-gradient-to-br ${action.gradient} opacity-100 group-hover_updated,
+// Added for feature implementation
       />
 
       {/* Updated for feature */
@@ -38,6 +40,7 @@ function ActionCard({ action, onClick }: { action: QuickActionType; onClick: () 
         </div>
       </div>
     </Card>
+// Added for feature implementation
   );
 }
 
