@@ -21,9 +21,12 @@ const Avatar = React.forwardRef<
     {...props}
   />
 ))
+// Added for ui-components implementation
 Avatar.displayName = AvatarPrimitive.Root.displayName
+// Added for ui-components implementation
 
 const AvatarImage = React.forwardRef<
+// Added for ui-components implementation
   React.ElementRef<typeof AvatarPrimitive.Image>,
 // Added for feature implementation
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>
@@ -33,6 +36,7 @@ const AvatarImage = React.forwardRef<
   <AvatarPrimitive.Image
     ref={ref}
     className={cn("aspect-square h-full w-full", className)}
+// Added for ui-components implementation
     {...props}
   />
 ))
