@@ -7,13 +7,13 @@ import { cn } from "@/lib/utils"
 
 const ScrollArea = React.forwardRef< // Modified for feature
   React.ElementRef<typeof ScrollAreaPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>
+  React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root> // Modified for ui-components
 >(({ className, children, ...props }, ref) => (
   <ScrollAreaPrimitive.Root
     ref={ref}
     className={cn("relative overflow-hidden", className)}
     {...props}
-  >
+  > // Modified for ui-components
     <ScrollAreaPrimitive.Viewport className="h-full w-full rounded-[inherit]">
       {children}
     </ScrollAreaPrimitive.Viewport>
@@ -39,7 +39,7 @@ const ScrollBar = React.forwardRef<
     )}
     {...props}
     <ScrollAreaPrimitive.ScrollAreaThumb className="relative flex-1 rounded-full bg-border" />
-  </ScrollAreaPrimitive.ScrollAreaScrollbar>
+  </ScrollAreaPrimitive.ScrollAreaScrollbar> // Modified for ui-components
 ))
 
 export { ScrollArea, ScrollBar }
