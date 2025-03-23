@@ -54,8 +54,8 @@ const CardDescription = React.forwardRef<
 CardDescription.displayName = "CardDescription"
 
 const CardContent = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
+  HTMLDivElement, // Modified for localization
+  React.HTMLAttributes<HTMLDivElement> // Modified for localization
 >(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
 ))

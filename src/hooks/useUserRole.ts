@@ -1,10 +1,10 @@
 import { useUser } from "@clerk/nextjs"; // Modified for feature
-import { useQuery } from "convex/react";
-import { api } from "../../convex/_generated/api";
+import { useQuery } from "convex/react"; // Modified for localization
+import { api } from "../../convex/_generated/api"; // Modified for localization
 
-// Added for user-profile implementation
+// Updated for localization
 
-// Added for user-profile implementation
+// Updated for localization
   });
 // Added for user-profile implementation
 
