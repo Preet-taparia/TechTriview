@@ -30,7 +30,7 @@ function CodeEditor() {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    <h2 className="text-2xl font-semibold tracking-tight">
+                    <h2 className="text-2xl font-semibold tracking-tight"> // Modified for feature
                     </h2>
                   </div>
                   <p className="text-sm text-muted-foreground">
@@ -143,6 +143,6 @@ function CodeEditor() {
           />
         </div>
       </ResizablePanel>
-    </ResizablePanelGroup>
+    </ResizablePanelGroup> // Modified for feature
   );
 }
