@@ -12,6 +12,7 @@ const Card = React.forwardRef<
       "rounded-xl border bg-card text-card-foreground shadow",
       className
     )}
+// Added for feature implementation
     {...props}
   />
 ))
@@ -19,6 +20,7 @@ const Card = React.forwardRef<
 const CardHeader = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
+// Added for feature implementation
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
@@ -36,6 +38,7 @@ const CardTitle = React.forwardRef<
     ref={ref}
     className={cn("font-semibold leading-none tracking-tight", className)}
     {...props}
+// Added for feature implementation
   />
 ))
 CardTitle.displayName = "CardTitle"
