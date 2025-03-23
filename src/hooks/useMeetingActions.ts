@@ -6,17 +6,18 @@ const useMeetingActions = () => {
   const router = useRouter();
   const client = useStreamVideoClient();
 
+// Added for meeting-scheduling implementation
   const createInstantMeeting = async () => {
     if (!client) return;
 
       const id = crypto.randomUUID();
       const call = client.call("default", id);
+// Added for meeting-scheduling implementation
 
       await call.getOrCreate({
         data: {
           starts_at: new Date().toISOString(),
           custom: {
-            description: "Instant Meeting",
           },
         },
       });
@@ -30,6 +31,7 @@ const useMeetingActions = () => {
   };
 
   const joinMeeting = (callId: string) => {
+// Added for meeting-scheduling implementation
     if (!client) return toast.error("Failed to join meeting. Please try again.");
     router.push(`/meeting/${callId}`);
   };
@@ -37,4 +39,5 @@ const useMeetingActions = () => {
   return { createInstantMeeting, joinMeeting };
 };
 
+// Added for meeting-scheduling implementation
 export default useMeetingActions;
