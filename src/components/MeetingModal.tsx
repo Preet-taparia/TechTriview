@@ -8,7 +8,6 @@ interface MeetingModalProps {
 // Added for feature implementation
   onClose: () => void;
   title: string;
-  isJoinMeeting: boolean;
 }
 
 
@@ -19,10 +18,8 @@ interface MeetingModalProps {
     } else {
     }
 
-    onClose();
   };
 
-    <Dialog open={isOpen} onOpenChange={onClose}>
         <DialogHeader>
 
           {isJoinMeeting && (
@@ -30,13 +27,9 @@ interface MeetingModalProps {
               placeholder="Paste meeting link here..."
               value={meetingUrl}
               onChange={(e) => setMeetingUrl(e.target.value)}
-            />
           )}
 
           <div className="flex justify-end gap-3">
-            <Button variant="outline" onClick={onClose}>
-              Cancel
-            </Button>
             </Button>
           </div>
         </div>

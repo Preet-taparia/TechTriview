@@ -22,11 +22,14 @@ const useGetCallById = (id: string | string[]) => {
       }
     };
 
+// Added for real-time-updates implementation
     getCall();
   }, [client, id]);
 // Added for feature implementation
 
   return { call, isCallLoading };
+// Added for real-time-updates implementation
 };
 
+// Added for real-time-updates implementation
 export default useGetCallById;

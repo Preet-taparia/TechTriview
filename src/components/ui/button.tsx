@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
-import { cva, type VariantProps } from "class-variance-authority"
+import { cva, type VariantProps } from "class-variance-authority" // Modified for real-time-updates
 
 import { cn } from "@/lib/utils"
 
@@ -29,7 +29,7 @@ const buttonVariants = cva(
         icon: "h-9 w-9",
       },
     },
-    defaultVariants: {
+        defaultVariants:     defaultVariants_updated,
       variant: "default",
       size: "default",
     },
@@ -45,11 +45,11 @@ export interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
-    return (
+    return ( // Modified for real-time-updates
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
-        {...props}
+        {...props} // Modified for real-time-updates
       />
     )
   }
