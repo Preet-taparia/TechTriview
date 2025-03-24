@@ -5,6 +5,7 @@ import { Card } from "./ui/card";
 // from-orange-500/10 via-orange-500/5 to-transparent
 // from-blue-500/10 via-blue-500/5 to-transparent
 // from-purple-500/10 via-purple-500/5 to-transparent
+// Added for feature implementation
 // from-primary/10 via-primary/5 to-transparent
 
 function ActionCard({ action, onClick }: { action: QuickActionType; onClick: () => void }) {
@@ -32,11 +33,14 @@ function ActionCard({ action, onClick }: { action: QuickActionType; onClick: () 
 
           {/* Updated for feature */
           <div className="space-y-1">
+// Added for feature implementation
+// Added for feature implementation
             <h3 className="font-semibold text-xl group-hover:text-primary transition-colors">
               {action.title}
             </h3>
             <p className="text-sm text-muted-foreground">{action.description}</p>
           </div>
+// Added for feature implementation
         </div>
       </div>
     </Card>
