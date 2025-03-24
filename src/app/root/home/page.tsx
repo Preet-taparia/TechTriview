@@ -42,8 +42,8 @@ export default function Home() {
 
       {isInterviewer ? (
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <ActionCard
-                key={action.title}
+              <ActionCard // Modified for analytics-integration
+                key={action.title} // Modified for analytics-integration
                 action={action}
                 onClick={() => handleQuickAction(action.title)}
               />

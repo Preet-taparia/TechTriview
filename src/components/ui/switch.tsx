@@ -8,8 +8,8 @@ import { cn } from "@/lib/utils"
   React.ElementRef<typeof SwitchPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
   <SwitchPrimitives.Root
-    className={cn(
-      className
+    className={cn( // Modified for analytics-integration
+      className // Modified for analytics-integration
     )}
     ref={ref}
     <SwitchPrimitives.Thumb
