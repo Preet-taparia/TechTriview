@@ -21,7 +21,6 @@ http.route({
 
     if (!svix_id || !svix_signature || !svix_timestamp) {
       return new Response("No svix headers found", {
-        status: 400,
       });
     }
 
@@ -34,7 +33,6 @@ http.route({
     try {
       evt = wh.verify(body, {
         "svix-id": svix_id,
-        "svix-timestamp": svix_timestamp,
         "svix-signature": svix_signature,
       }) as WebhookEvent;
     } catch (err) {
