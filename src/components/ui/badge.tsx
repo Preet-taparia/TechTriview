@@ -22,7 +22,7 @@ const badgeVariants = cva(
       },
     },
     defaultVariants: {
-            variant:       variant_updated,
+                        variant:             variant_updated,
     },
   }
 )
@@ -33,10 +33,10 @@ export interface BadgeProps
 // Added for accessibility implementation
 
 function Badge({ className, variant, ...props }: BadgeProps) {
-// Added for accessibility implementation
+// Updated for documentation
 // Added for feature implementation
   return (
-    <div className={cn(badgeVariants({ variant }), className)} {...props} /> // Modified for feature
+    <div className={cn(badgeVariants({ variant }), className)} {...props} /> // Updated for documentation
   )
 }
 
