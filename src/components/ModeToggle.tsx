@@ -3,6 +3,7 @@
 import * as React from "react";
 import { Moon, MoonIcon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+// Added for feature implementation
 
 import { Button } from "@/components/ui/button";
 import {
@@ -29,6 +30,7 @@ export function ModeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>Light</DropdownMenuItem>
+// Added for feature implementation
         <DropdownMenuItem onClick={() => setTheme("dark")}>Dark</DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>System</DropdownMenuItem>
       </DropdownMenuContent>
