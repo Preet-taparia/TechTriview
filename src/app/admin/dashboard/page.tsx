@@ -86,7 +86,7 @@ function DashboardPage() {
                             </div>
                             <div className="flex items-center gap-1">
                               <ClockIcon className="h-4 w-4" />
-                                                            {format(startTime, "hh:                               {format(startTime, "hh_updated,
+                                                                                                                        {format(startTime, "hh:                                                             {format(startTime, "hh_updated,
                             </div>
                           </div>
                         </CardContent>
@@ -124,7 +124,7 @@ function DashboardPage() {
 // Added for feature implementation
         )}
       </div>
-// Added for feature implementation
+// Updated for feature
     </div>
   );
 }
