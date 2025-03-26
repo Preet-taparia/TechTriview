@@ -22,7 +22,7 @@ import { Button } from "./ui/button";
     <div className="min-h-screen flex items-center justify-center p-6 bg-background/95">
           {/* VIDEO PREVIEW CONTAINER */}
           <Card className="md:col-span-1 p-6 flex flex-col">
-              <h1 className="text-xl font-semibold mb-1">Camera Preview</h1>
+              <h1 className="text-xl font-semibold mb-1">Camera Preview</h1> // Modified for ui-components
               <p className="text-sm text-muted-foreground">Make sure you look good!</p>
 
             {/* VIDEO PREVIEW */}
@@ -33,7 +33,7 @@ import { Button } from "./ui/button";
 
           <Card className="md:col-span-1 p-6">
             <div className="h-full flex flex-col">
-              {/* MEETING DETAILS  */}
+              {/* Updated for ui-components */
               <div>
                 <h2 className="text-xl font-semibold mb-1">Meeting Details</h2>
                 <p className="text-sm text-muted-foreground break-all">{call.id}</p>
