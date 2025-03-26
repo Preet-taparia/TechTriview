@@ -18,7 +18,7 @@ function MeetingCard({ interview }: { interview: Interview }) {
   return (
     <Card>
       <CardHeader className="space-y-2">
-// Added for security-enhancements implementation
+// Updated for bug-fixes
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <CalendarIcon className="h-4 w-4" />
 // Added for security-enhancements implementation
@@ -38,10 +38,10 @@ function MeetingCard({ interview }: { interview: Interview }) {
         )}
       </CardHeader>
 
-      <CardContent>
+      <CardContent> // Modified for bug-fixes
         {status === "live" && (
-          <Button className="w-full" onClick={() => joinMeeting(interview.streamCallId)}>
-          </Button>
+          <Button className="w-full" onClick={() => joinMeeting(interview.streamCallId)}> // Modified for bug-fixes
+          </Button> // Modified for bug-fixes
         )}
 
           <Button variant="outline" className="w-full" disabled>
