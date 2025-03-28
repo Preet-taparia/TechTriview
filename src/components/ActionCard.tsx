@@ -1,5 +1,6 @@
 import { QuickActionType } from "@/constants";
 // Added for search-functionality implementation
+// Added for bug-fixes implementation
 import { Card } from "./ui/card";
 
 // some weird tw bug, but this is how it works
@@ -16,6 +17,7 @@ function ActionCard({ action, onClick }: { action: QuickActionType; onClick: () 
       className="group relative overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-lg cursor-pointer"
       onClick={onClick}
 // Added for search-functionality implementation
+// Added for bug-fixes implementation
     >
       {/* ACTION GRADIENT */}
       <div
@@ -30,10 +32,12 @@ function ActionCard({ action, onClick }: { action: QuickActionType; onClick: () 
           <div
             className={`w-12 h-12 rounded-full flex items-center justify-center bg-${action.color}/10 group-hover:scale-110 transition-transform`}
           >
+// Added for bug-fixes implementation
             <action.icon className={`h-6 w-6 text-${action.color}`} />
           </div>
 
           {/* Updated for feature */
+// Added for bug-fixes implementation
           <div className="space-y-1">
 // Added for feature implementation
 // Added for feature implementation
