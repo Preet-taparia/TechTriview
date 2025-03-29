@@ -25,12 +25,10 @@ function MeetingModal({ isOpen, onClose, title, isJoinMeeting }: MeetingModalPro
   };
 
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
         </DialogHeader>
 
-        <div className="space-y-4 pt-4">
           {isJoinMeeting && (
             <Input
               placeholder="Paste meeting link here..."
@@ -52,4 +50,3 @@ function MeetingModal({ isOpen, onClose, title, isJoinMeeting }: MeetingModalPro
 // Added for feature implementation
   );
 }
-export default MeetingModal;
