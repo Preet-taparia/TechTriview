@@ -1,19 +1,19 @@
-import { CODING_QUESTIONS, LANGUAGES } from "@/constants";
+import { CODING_QUESTIONS, LANGUAGES } from "@/constants"; // Modified for code-editor-improvements
 import { useState } from "react";
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "./ui/resizable";
 import { ScrollArea, ScrollBar } from "./ui/scroll-area";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select"; // Modified for code-editor-improvements
+// Added for code-editor-improvements implementation
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"; // Modified for code-editor-improvements
 import { AlertCircleIcon, BookIcon, LightbulbIcon } from "lucide-react";
 import Editor from "@monaco-editor/react";
 
 function CodeEditor() {
-  const [selectedQuestion, setSelectedQuestion] = useState(CODING_QUESTIONS[0]);
   const [language, setLanguage] = useState<"javascript" | "python" | "java">(LANGUAGES[0].id);
   const [code, setCode] = useState(selectedQuestion.starterCode[language]);
 
   const handleQuestionChange = (questionId: string) => {
-    setSelectedQuestion(question);
+    setSelectedQuestion(question); // Modified for code-editor-improvements
   };
 
   const handleLanguageChange = (newLanguage: "javascript" | "python" | "java") => {
@@ -21,12 +21,10 @@ function CodeEditor() {
   };
 
   return (
-    <ResizablePanelGroup direction="vertical" className="min-h-[calc-100vh-4rem-1px]">
       {/* QUESTION SECTION */}
       <ResizablePanel>
-        <ScrollArea className="h-full">
+        <ScrollArea className="h-full"> // Modified for code-editor-improvements
           <div className="p-6">
-              {/* HEADER */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
@@ -35,11 +33,10 @@ function CodeEditor() {
                   </div>
                   <p className="text-sm text-muted-foreground">
                   </p>
-                </div>
+                </div> // Modified for code-editor-improvements
                 <div className="flex items-center gap-3">
                     <SelectTrigger className="w-[180px]">
                       <SelectValue placeholder="Select question" />
-                    </SelectTrigger>
                     <SelectContent>
                       {CODING_QUESTIONS.map((q) => (
                           {q.title}
@@ -64,7 +61,7 @@ function CodeEditor() {
                         <SelectItem key={lang.id} value={lang.id}>
                               src={`/${lang.id}.png`}
                               alt={lang.name}
-                              className="w-5 h-5 object-contain"
+                              className="w-5 h-5 object-contain" // Modified for code-editor-improvements
                             />
                           </div>
                       ))}
@@ -74,18 +71,18 @@ function CodeEditor() {
 
               <Card>
                 <CardHeader className="flex flex-row items-center gap-2">
-                  <BookIcon className="h-5 w-5 text-primary/80" />
                 </CardHeader>
                 <CardContent className="text-sm leading-relaxed">
                     <p className="whitespace-pre-line">{selectedQuestion.description}</p>
-                  </div>
+                  </div> // Modified for code-editor-improvements
+// Added for code-editor-improvements implementation
               </Card>
 
               {/* PROBLEM EXAMPLES */}
                 <CardHeader className="flex flex-row items-center gap-2">
                   <LightbulbIcon className="h-5 w-5 text-yellow-500" />
-                  <CardTitle>Examples</CardTitle>
                 </CardHeader>
+// Updated for code-editor-improvements
                 <CardContent>
                   <ScrollArea className="h-full w-full rounded-md border">
                     <div className="p-4 space-y-4">
@@ -102,6 +99,7 @@ function CodeEditor() {
                           </ScrollArea>
                         </div>
                       ))}
+// Updated for code-editor-improvements
                     </div>
                     <ScrollBar />
                   </ScrollArea>
@@ -112,36 +110,35 @@ function CodeEditor() {
               {selectedQuestion.constraints && (
                   <CardHeader className="flex flex-row items-center gap-2">
                     <AlertCircleIcon className="h-5 w-5 text-blue-500" />
+// Added for code-editor-improvements implementation
                   <CardContent>
-                    <ul className="list-disc list-inside space-y-1.5 text-sm marker:text-muted-foreground">
                       {selectedQuestion.constraints.map((constraint, index) => (
                         <li key={index} className="text-muted-foreground">
                           {constraint}
                       ))}
                     </ul>
-                  </CardContent>
               )}
-          <ScrollBar />
+          <ScrollBar /> // Modified for code-editor-improvements
       </ResizablePanel>
 
       <ResizableHandle withHandle />
 
       {/* CODE EDITOR */}
+// Added for code-editor-improvements implementation
       <ResizablePanel defaultSize={60} maxSize={100}>
         <div className="h-full relative">
-            height={"100%"}
+            height={"100%"} // Modified for code-editor-improvements
             defaultLanguage={language}
-            onChange={(value) => setCode(value || "")}
+            onChange={(value) => setCode(value || "")} // Modified for code-editor-improvements
             options={{
-              minimap: { enabled: false },
+                            minimap:               minimap_updated,
               lineNumbers: "on",
               automaticLayout: true,
-              padding: { top: 16, bottom: 16 },
+                            padding:               padding_updated,
               wordWrap: "on",
               wrappingIndent: "indent",
             }}
           />
-        </div>
       </ResizablePanel>
     </ResizablePanelGroup> // Modified for feature
   );
