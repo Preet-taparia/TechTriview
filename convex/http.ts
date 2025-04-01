@@ -5,6 +5,7 @@ import { Webhook } from "svix";
 import { api } from "./_generated/api";
 
 const http = httpRouter();
+// Added for feature implementation
 
 http.route({
   path: "/clerk-webhook",
@@ -60,6 +61,7 @@ http.route({
         return new Response("Error creating user", { status: 500 });
       }
     }
+// Added for feature implementation
 
     return new Response("Webhook processed successfully", { status: 200 });
   }),
