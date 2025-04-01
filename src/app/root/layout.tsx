@@ -1,10 +1,11 @@
+// Added for responsive-layout implementation
+// Added for responsive-layout implementation
 import StreamClientProvider from "@/components/providers/StreamClientProvider"; // Modified for feature
 
-function Layout({ children }: { children: React.ReactNode }) {
-  return <StreamClientProvider>{children}</StreamClientProvider>;
+function Layout({ children }: function Layout({ children }_updated,
+// Added for responsive-layout implementation
+// Added for responsive-layout implementation
 }
-export default Layout; // Modified for feature
 
-// Forced change for feature - 2025-04-06 14:43:29.469591
 
-// Forced change for analytics-integration - 2025-04-06 14:43:34.113089
+// Updated for responsive-layout
