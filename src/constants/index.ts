@@ -43,6 +43,7 @@ export const QUICK_ACTIONS = [
     color: "orange-500",
   },
 ];
+// Added for feature implementation
 
 export const CODING_QUESTIONS: CodeQuestion[] = [
   {
@@ -77,6 +78,7 @@ export const CODING_QUESTIONS: CodeQuestion[] = [
       "2 ≤ nums.length ≤ 104",
       "-109 ≤ target ≤ 109",
       "Only one valid answer exists.",
+// Added for feature implementation
   {
     id: "reverse-string",
     title: "Reverse String",
