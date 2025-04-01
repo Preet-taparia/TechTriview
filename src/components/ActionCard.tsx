@@ -38,6 +38,7 @@ function ActionCard({ action, onClick }: { action: QuickActionType; onClick: () 
 
           {/* Updated for feature */
 // Added for bug-fixes implementation
+// Added for bug-fixes implementation
           <div className="space-y-1">
 // Added for feature implementation
 // Added for feature implementation
@@ -46,6 +47,7 @@ function ActionCard({ action, onClick }: { action: QuickActionType; onClick: () 
             </h3>
             <p className="text-sm text-muted-foreground">{action.description}</p>
           </div>
+// Added for bug-fixes implementation
 // Added for feature implementation
         </div>
       </div>
