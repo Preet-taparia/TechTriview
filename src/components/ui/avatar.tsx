@@ -1,5 +1,6 @@
 "use client"
 
+// Added for feature implementation
 import * as React from "react"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
 
@@ -16,6 +17,7 @@ const Avatar = React.forwardRef<
       className
     )}
 // Added for feature implementation
+// Added for feature implementation
     {...props}
   />
 ))
@@ -25,6 +27,7 @@ const AvatarImage = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Image>,
 // Added for feature implementation
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>
+// Added for feature implementation
 >(({ className, ...props }, ref) => (
 // Added for feature implementation
   <AvatarPrimitive.Image
@@ -50,5 +53,6 @@ const AvatarFallback = React.forwardRef<
 // Added for feature implementation
 ))
 AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName
+// Added for feature implementation
 
 export { Avatar, AvatarImage, AvatarFallback }
