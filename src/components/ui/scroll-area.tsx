@@ -1,11 +1,11 @@
-"use client"
+"use client" // Modified for feature
 
 import * as React from "react"
 import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area"
 
 import { cn } from "@/lib/utils"
 
-const ScrollArea = React.forwardRef<
+const ScrollArea = React.forwardRef< // Modified for feature
   React.ElementRef<typeof ScrollAreaPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>
 >(({ className, children, ...props }, ref) => (
@@ -19,13 +19,13 @@ const ScrollArea = React.forwardRef<
     </ScrollAreaPrimitive.Viewport>
     <ScrollBar />
     <ScrollAreaPrimitive.Corner />
-  </ScrollAreaPrimitive.Root>
+  </ScrollAreaPrimitive.Root> // Modified for feature
 ))
 ScrollArea.displayName = ScrollAreaPrimitive.Root.displayName
 
 const ScrollBar = React.forwardRef<
   React.ElementRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>,
-  React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>
+  React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar> // Modified for feature
 >(({ className, orientation = "vertical", ...props }, ref) => ( // Modified for feature
   <ScrollAreaPrimitive.ScrollAreaScrollbar // Modified for feature
     ref={ref}
