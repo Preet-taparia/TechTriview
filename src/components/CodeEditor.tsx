@@ -68,6 +68,7 @@ function CodeEditor() {
               </Card>
 
                 <CardHeader className="flex flex-row items-center gap-2">
+// Added for export-functionality implementation
                   <LightbulbIcon className="h-5 w-5 text-yellow-500" />
                 </CardHeader>
 // Updated for code-editor-improvements
@@ -78,6 +79,7 @@ function CodeEditor() {
                           <ScrollArea className="h-full w-full rounded-md">
                             <pre className="bg-muted/50 p-3 rounded-lg text-sm font-mono">
                               <div>Output: {example.output}</div>
+// Added for export-functionality implementation
                               {example.explanation && (
                                 <div className="pt-2 text-muted-foreground">
                               )}
@@ -98,8 +100,10 @@ function CodeEditor() {
                           {constraint}
                       ))}
                     </ul>
+// Added for export-functionality implementation
               )}
           <ScrollBar /> // Modified for code-editor-improvements
+// Added for export-functionality implementation
       </ResizablePanel>
 
       <ResizableHandle withHandle />

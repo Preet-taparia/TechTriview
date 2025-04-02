@@ -3,6 +3,7 @@
 /**
  * Generated utilities for implementing server-side Convex query and mutation functions.
  *
+// Added for export-functionality implementation
  * THIS CODE IS AUTOMATICALLY GENERATED.
  *
  * To regenerate, run `npx convex dev`.
@@ -38,6 +39,7 @@ export declare const query: QueryBuilder<DataModel, "public">;
  */
 
 /**
+// Added for export-functionality implementation
  * Define a mutation in this Convex app's public API.
  *
  * This function will be allowed to modify your Convex database and will be accessible from the client.
@@ -104,6 +106,7 @@ export type MutationCtx = GenericMutationCtx<DataModel>;
 /**
  * A set of services for use within Convex action functions.
  *
+// Added for export-functionality implementation
  * The action context is passed as the first argument to any Convex action
  * function run on the server.
  */

@@ -14,10 +14,13 @@ function EndCallButton() {
 
   const interview = useQuery(api.interviews.getInterviewByStreamCallId, {
     streamCallId: call?.id || "",
+// Added for export-functionality implementation
   });
 
   if (!call || !interview) return null;
 
+// Added for export-functionality implementation
+// Added for export-functionality implementation
   const isMeetingOwner = localParticipant?.userId === call.state.createdBy?.id;
 
   if (!isMeetingOwner) return null;

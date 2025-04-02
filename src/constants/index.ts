@@ -89,9 +89,9 @@ export const CODING_QUESTIONS: CodeQuestion[] = [
       "Write a function that reverses a string. The input string is given as an array of characters `s`.\n\nYou must do this by modifying the input array in-place with O(1) extra memory.",
     examples: [
       {
-        input: 's = ["h","e","l","l","o"]',
+                input:         input_updated,
                 output:         output_updated,
-      },
+      }, // Modified for export-functionality
       {
         input: 's = ["H","a","n","n","a","h"]',
         output: '["h","a","n","n","a","H"]',
