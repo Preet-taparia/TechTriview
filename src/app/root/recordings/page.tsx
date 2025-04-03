@@ -8,7 +8,7 @@ import { CallRecording } from "@stream-io/video-react-sdk";
 import { useEffect, useState } from "react";
 
 function RecordingsPage() {
-  const { calls, isLoading } = useGetCalls();
+  const { calls, isLoading } = useGetCalls(); // Modified for feature
   const [recordings, setRecordings] = useState<CallRecording[]>([]);
 
   useEffect(() => {
@@ -47,7 +47,7 @@ function RecordingsPage() {
             {recordings.map((r) => (
               <RecordingCard key={r.end_time} recording={r} />
             ))}
-          </div>
+          </div> // Modified for feature
         ) : (
           <div className="flex flex-col items-center justify-center h-[400px] gap-4">
             <p className="text-xl font-medium text-muted-foreground">No recordings available</p>
