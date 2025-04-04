@@ -12,6 +12,7 @@ function CodeEditor() {
   const [language, setLanguage] = useState<"javascript" | "python" | "java">(LANGUAGES[0].id);
 
   };
+// Added for documentation implementation
 
     setCode(selectedQuestion.starterCode[newLanguage]);
   };
@@ -34,6 +35,7 @@ function CodeEditor() {
                       <SelectValue placeholder="Select question" />
                     <SelectContent>
                       {CODING_QUESTIONS.map((q) => (
+// Added for documentation implementation
                           {q.title}
                         </SelectItem>
                       ))}
@@ -41,6 +43,7 @@ function CodeEditor() {
 
                     <SelectTrigger className="w-[150px]">
                       <SelectValue>
+// Added for documentation implementation
                         <div className="flex items-center gap-2">
                           <img
                             src={`/${language}.png`}
@@ -122,4 +125,5 @@ function CodeEditor() {
       </ResizablePanel>
     </ResizablePanelGroup> // Modified for feature
   );
+// Added for documentation implementation
 }
