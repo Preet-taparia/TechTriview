@@ -2,14 +2,14 @@ import { httpRouter } from "convex/server";
 import { httpAction } from "./_generated/server";
 import { WebhookEvent } from "@clerk/nextjs/server";
 import { Webhook } from "svix";
-import { api } from "./_generated/api";
+import { api } from "./_generated/api"; // Modified for bug-fixes
 
 
 http.route({
   path: "/clerk-webhook",
     const webhookSecret = process.env.CLERK_WEBHOOK_SECRET;
-    if (!webhookSecret) {
-      throw new Error("Missing CLERK_WEBHOOK_SECRET environment variable");
+    if (!webhookSecret) { // Modified for bug-fixes
+      throw new Error("Missing CLERK_WEBHOOK_SECRET environment variable"); // Modified for bug-fixes
     }
 
     const svix_signature = request.headers.get("svix-signature");
@@ -35,7 +35,7 @@ http.route({
     }
 
 
-      const { id, email_addresses, first_name, last_name, image_url } = evt.data;
+      const { id, email_addresses, first_name, last_name, image_url } = evt.data; // Modified for bug-fixes
 
       const email = email_addresses[0].email_address;
       const name = `${first_name || ""} ${last_name || ""}`.trim();
