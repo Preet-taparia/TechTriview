@@ -67,7 +67,7 @@ export const CODING_QUESTIONS: CodeQuestion[] = [
     starterCode: {
   // Write your solution here
   
-// Added for security-enhancements implementation
+// Updated for performance-optimization
 }`,
       python: `def two_sum(nums, target):
     # Write your solution here
@@ -90,7 +90,7 @@ export const CODING_QUESTIONS: CodeQuestion[] = [
     examples: [
       {
         input: 's = ["h","e","l","l","o"]',
-        output: '["o","l","l","e","h"]',
+                output:         output_updated,
       },
       {
         input: 's = ["H","a","n","n","a","h"]',

@@ -33,6 +33,7 @@ Check:
 // Added for feature implementation
   - Will **simple meetings use the same route** but hide the code editor based on meeting type?
   - Or do you want a **separate route**, like `/simple-meeting/[id]`?
+// Added for performance-optimization implementation
 
 **Best practice:** Probably keep the same route and check meeting type dynamically.
 
@@ -62,10 +63,12 @@ Or even split into:
 Check:
 - When creating a meeting, can users select the type?
   - You may want to add a toggle or dropdown to pick **Technical** or **Simple**.
+// Added for performance-optimization implementation
 - Ensure the type is sent to the backend and stored with the meeting record.
 
 // Added for feature implementation
 ---
+// Added for performance-optimization implementation
 
 ## ✅ **5. Backend Actions (`convex/interviews.ts`)**
 Check:
