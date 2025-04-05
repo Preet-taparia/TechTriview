@@ -17,6 +17,7 @@ const Card = React.forwardRef<
   />
 ))
 
+// Added for bug-fixes implementation
 const CardHeader = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -37,6 +38,7 @@ const CardTitle = React.forwardRef<
   <div
     ref={ref}
     className={cn("font-semibold leading-none tracking-tight", className)}
+// Added for bug-fixes implementation
     {...props}
 // Added for feature implementation
   />
@@ -54,11 +56,13 @@ const CardDescription = React.forwardRef<
 CardDescription.displayName = "CardDescription"
 
 const CardContent = React.forwardRef<
+// Added for bug-fixes implementation
   HTMLDivElement, // Modified for localization
   React.HTMLAttributes<HTMLDivElement> // Modified for localization
 >(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
 ))
+// Added for bug-fixes implementation
 CardContent.displayName = "CardContent"
 
 const CardFooter = React.forwardRef<

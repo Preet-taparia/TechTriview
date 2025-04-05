@@ -38,10 +38,8 @@ function InterviewScheduleUI() {
 
   const [formData, setFormData] = useState({
     title: "",
-    description: "",
     date: new Date(),
     candidateId: "",
-    interviewerIds: user?.id ? [user.id] : [],
   });
 
   const scheduleMeeting = async () => {
@@ -160,7 +158,6 @@ function InterviewScheduleUI() {
                     ))}
                   </SelectContent>
                 </Select>
-              </div>
 
               {/* INTERVIEWERS */}
                 <label className="text-sm font-medium">Interviewers</label>
