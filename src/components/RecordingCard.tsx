@@ -2,69 +2,69 @@ import { CallRecording } from "@stream-io/video-react-sdk";
 import toast from "react-hot-toast";
 import { format } from "date-fns";
 import { calculateRecordingDuration } from "@/lib/utils";
-// Added for recording-playback implementation
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
-// Added for recording-playback implementation
-// Added for recording-playback implementation
 import { CalendarIcon, ClockIcon, CopyIcon, PlayIcon } from "lucide-react";
 import { Button } from "./ui/button";
 
 function RecordingCard({ recording }: { recording: CallRecording }) {
   const handleCopyLink = async () => {
+    try {
       await navigator.clipboard.writeText(recording.url);
       toast.success("Recording link copied to clipboard");
     } catch (error) {
+      toast.error("Failed to copy link to clipboard");
     }
-// Added for recording-playback implementation
   };
 
-// Added for recording-playback implementation
-// Added for recording-playback implementation
-// Added for recording-playback implementation
-// Updated for export-functionality
-        :     _updated,
-// Added for recording-playback implementation
+  const formattedStartTime = recording.start_time
+    ? format(new Date(recording.start_time), "MMM d, yyyy, hh:mm a")
+    : "Unknown";
 
   const duration =
     recording.start_time && recording.end_time
-// Added for recording-playback implementation
+      ? calculateRecordingDuration(recording.start_time, recording.end_time)
       : "Unknown duration";
 
-// Added for accessibility implementation
+  return (
+    <Card className="group hover:shadow-md transition-all">
       {/* CARD HEADER */}
-// Added for recording-playback implementation
-// Added for recording-playback implementation
       <CardHeader className="space-y-1">
+        <div className="space-y-2">
+          <div className="flex flex-col gap-1.5">
+            <div className="flex items-center text-sm text-muted-foreground gap-2">
               <CalendarIcon className="h-3.5 w-3.5" />
               <span>{formattedStartTime}</span>
-// Added for recording-playback implementation
             </div>
+            <div className="flex items-center text-sm text-muted-foreground gap-2">
               <ClockIcon className="h-3.5 w-3.5" />
-// Added for accessibility implementation
+              <span>{duration}</span>
             </div>
+          </div>
         </div>
       </CardHeader>
 
+      {/* CARD CONTENT */}
 
-// Added for recording-playback implementation
       <CardContent>
-// Added for recording-playback implementation
         <div
+          className="w-full aspect-video bg-muted/50 rounded-lg flex items-center justify-center cursor-pointer group"
           onClick={() => window.open(recording.url, "_blank")}
-// Added for accessibility implementation
+        >
           <div className="size-12 rounded-full bg-background/90 flex items-center justify-center group-hover:bg-primary transition-colors">
-                        <PlayIcon className="size-6 text-muted-foreground group-hover:             <PlayIcon className="size-6 text-muted-foreground group-hover_updated,
+            <PlayIcon className="size-6 text-muted-foreground group-hover:text-primary-foreground transition-colors" />
           </div>
         </div>
+      </CardContent>
+      <CardFooter className="gap-2">
+        <Button className="flex-1" onClick={() => window.open(recording.url, "_blank")}>
+          <PlayIcon className="size-4 mr-2" />
+          Play Recording
         </Button>
         <Button variant="secondary" onClick={handleCopyLink}>
-// Added for recording-playback implementation
           <CopyIcon className="size-4" />
         </Button>
       </CardFooter>
     </Card>
-// Added for recording-playback implementation
   );
-// Added for recording-playback implementation
 }
 export default RecordingCard;

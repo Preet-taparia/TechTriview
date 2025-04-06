@@ -1,4 +1,3 @@
-// Updated for feature
 "use client";
 
 import Link from "next/link";
@@ -13,12 +12,11 @@ function DasboardBtn() {
 
   return (
     <Link href={"/dashboard"}>
-      <Button className="gap-2 font-medium" size={"sm"}> // Modified for feature
+      <Button className="gap-2 font-medium" size={"sm"}>
         <SparklesIcon className="size-4" />
-        Dashboard // Modified for feature
+        Dashboard
       </Button>
     </Link>
   );
 }
-// Added for feature implementation
 export default DasboardBtn;

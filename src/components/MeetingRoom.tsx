@@ -19,12 +19,14 @@ import {
 import { Button } from "./ui/button";
 import EndCallButton from "./EndCallButton";
 import CodeEditor from "./CodeEditor";
+import Whiteboard from "./Whiteboard";
 
 function MeetingRoom() {
   const router = useRouter();
   const [layout, setLayout] = useState<"grid" | "speaker">("speaker");
   const [showParticipants, setShowParticipants] = useState(false);
   const { useCallCallingState } = useCallStateHooks();
+  const [isWhiteboard, setIsWhiteboard] = useState(false);
 
   const callingState = useCallCallingState();
 
@@ -95,7 +97,12 @@ function MeetingRoom() {
         <ResizableHandle withHandle />
 
         <ResizablePanel defaultSize={65} minSize={25}>
-          <CodeEditor />
+          <div className="flex justify-end mb-4">
+            <Button onClick={() => setIsWhiteboard(!isWhiteboard)}>
+              {isWhiteboard ? "Switch to Code Editor" : "Switch to Whiteboard"}
+            </Button>
+          </div>
+          {isWhiteboard ? <Whiteboard /> : <CodeEditor />}
         </ResizablePanel>
       </ResizablePanelGroup>
     </div>

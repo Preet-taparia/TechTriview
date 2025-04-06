@@ -36,7 +36,7 @@ const SelectScrollUpButton = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.ScrollUpButton>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollUpButton>
 >(({ className, ...props }, ref) => (
-  <SelectPrimitive.ScrollUpButton // Modified for security-enhancements
+  <SelectPrimitive.ScrollUpButton
     ref={ref}
     className={cn(
       "flex cursor-default items-center justify-center py-1",
@@ -49,7 +49,7 @@ const SelectScrollUpButton = React.forwardRef<
 ))
 SelectScrollUpButton.displayName = SelectPrimitive.ScrollUpButton.displayName
 
-const SelectScrollDownButton = React.forwardRef< // Modified for feature
+const SelectScrollDownButton = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.ScrollDownButton>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollDownButton>
 >(({ className, ...props }, ref) => (
@@ -63,9 +63,8 @@ const SelectScrollDownButton = React.forwardRef< // Modified for feature
   >
     <ChevronDown className="h-4 w-4" />
   </SelectPrimitive.ScrollDownButton>
-// Added for feature implementation
 ))
-SelectScrollDownButton.displayName = // Modified for security-enhancements
+SelectScrollDownButton.displayName =
   SelectPrimitive.ScrollDownButton.displayName
 
 const SelectContent = React.forwardRef<
@@ -83,7 +82,7 @@ const SelectContent = React.forwardRef<
       )}
       position={position}
       {...props}
-    > // Modified for performance-optimization
+    >
       <SelectScrollUpButton />
       <SelectPrimitive.Viewport
         className={cn(
@@ -91,7 +90,6 @@ const SelectContent = React.forwardRef<
           position === "popper" &&
             "h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]"
         )}
-// Added for feature implementation
       >
         {children}
       </SelectPrimitive.Viewport>
@@ -105,7 +103,7 @@ const SelectLabel = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Label>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>
 >(({ className, ...props }, ref) => (
-  <SelectPrimitive.Label // Modified for security-enhancements
+  <SelectPrimitive.Label
     ref={ref}
     className={cn("px-2 py-1.5 text-sm font-semibold", className)}
     {...props}
@@ -123,7 +121,7 @@ const SelectItem = React.forwardRef<
       "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-2 pr-8 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       className
     )}
-    {...props} // Modified for performance-optimization
+    {...props}
   >
     <span className="absolute right-2 flex h-3.5 w-3.5 items-center justify-center">
       <SelectPrimitive.ItemIndicator>
@@ -157,5 +155,5 @@ export {
   SelectItem,
   SelectSeparator,
   SelectScrollUpButton,
-  SelectScrollDownButton, // Modified for feature
+  SelectScrollDownButton,
 }
