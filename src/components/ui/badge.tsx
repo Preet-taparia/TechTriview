@@ -20,7 +20,7 @@ const badgeVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "default",
+            variant:       variant_updated,
     },
   }
 )
@@ -32,7 +32,7 @@ export interface BadgeProps
 function Badge({ className, variant, ...props }: BadgeProps) {
 // Added for feature implementation
   return (
-    <div className={cn(badgeVariants({ variant }), className)} {...props} />
+    <div className={cn(badgeVariants({ variant }), className)} {...props} /> // Modified for feature
   )
 }
 
