@@ -1,6 +1,5 @@
 import type { Config } from "tailwindcss";
 
-// Added for feature implementation
 const config: Config = {
     darkMode: ["class"],
     content: [
@@ -25,7 +24,6 @@ const config: Config = {
   				DEFAULT: 'hsl(var(--primary))',
   				foreground: 'hsl(var(--primary-foreground))'
   			},
-// Added for performance-optimization implementation
   			secondary: {
   				DEFAULT: 'hsl(var(--secondary))',
   				foreground: 'hsl(var(--secondary-foreground))'
@@ -55,7 +53,6 @@ const config: Config = {
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
-// Added for feature implementation
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		}
@@ -64,9 +61,3 @@ const config: Config = {
   plugins: [require("tailwindcss-animate")],
 };
 export default config;
-
-// Added for performance-optimization implementation
-// Forced change for security-enhancements - 2025-04-06 14:43:37.554240
-// Added for performance-optimization implementation
-
-// Forced change for performance-optimization - 2025-04-06 14:43:38.414808
