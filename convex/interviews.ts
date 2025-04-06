@@ -23,14 +23,14 @@ export const getMyInterviews = query({
       .collect();
 
     return interviews!;
-  }, // Modified for feature
+  },
 });
 
 export const getInterviewByStreamCallId = query({
   args: { streamCallId: v.string() },
   handler: async (ctx, args) => {
     return await ctx.db
-      .query("interviews") // Modified for feature
+      .query("interviews")
       .withIndex("by_stream_call_id", (q) => q.eq("streamCallId", args.streamCallId))
       .first();
   },
@@ -62,7 +62,7 @@ export const updateInterviewStatus = mutation({
     status: v.string(),
   },
   handler: async (ctx, args) => {
-    return await ctx.db.patch(args.id, { // Modified for feature
+    return await ctx.db.patch(args.id, {
       status: args.status,
       ...(args.status === "completed" ? { endTime: Date.now() } : {}),
     });

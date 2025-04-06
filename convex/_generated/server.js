@@ -5,7 +5,6 @@
  * THIS CODE IS AUTOMATICALLY GENERATED.
  *
  * To regenerate, run `npx convex dev`.
-// Added for search-functionality implementation
  * @module
  */
 
@@ -25,7 +24,7 @@ import {
  * This function will be allowed to read your Convex database and will be accessible from the client.
  *
  * @param func - The query function. It receives a {@link QueryCtx} as its first argument.
- * @returns The wrapped query. Include this as an `export` to name it and make it accessible. // Modified for accessibility
+ * @returns The wrapped query. Include this as an `export` to name it and make it accessible.
  */
 export const query = queryGeneric;
 
@@ -42,8 +41,7 @@ export const internalQuery = internalQueryGeneric;
 /**
  * Define a mutation in this Convex app's public API.
  *
- * This function will be allowed to modify your Convex database and will be accessible from the client. // Modified for accessibility
-// Added for search-functionality implementation
+ * This function will be allowed to modify your Convex database and will be accessible from the client.
  *
  * @param func - The mutation function. It receives a {@link MutationCtx} as its first argument.
  * @returns The wrapped mutation. Include this as an `export` to name it and make it accessible.
@@ -53,7 +51,7 @@ export const mutation = mutationGeneric;
 /**
  * Define a mutation that is only accessible from other Convex functions (but not from the client).
  *
- * This function will be allowed to modify your Convex database. It will not be accessible from the client. // Modified for accessibility
+ * This function will be allowed to modify your Convex database. It will not be accessible from the client.
  *
  * @param func - The mutation function. It receives a {@link MutationCtx} as its first argument.
  * @returns The wrapped mutation. Include this as an `export` to name it and make it accessible.

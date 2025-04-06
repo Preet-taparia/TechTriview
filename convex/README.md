@@ -8,9 +8,9 @@ A query function that takes two arguments looks like:
 ```ts
 // functions.js
 import { query } from "./_generated/server";
-import { v } from "convex/values"; // Modified for feature
+import { v } from "convex/values";
 
-export const myQueryFunction = query({ // Modified for feature
+export const myQueryFunction = query({
   // Validators for arguments.
   args: {
     first: v.number(),
@@ -42,7 +42,7 @@ const data = useQuery(api.functions.myQueryFunction, {
 });
 ```
 
-A mutation function looks like: A mutation function looks like_updated,
+A mutation function looks like:
 
 ```ts
 // functions.js
@@ -79,7 +79,7 @@ function handleButtonPress() {
   mutation({ first: "Hello!", second: "me" });
   // OR
   // use the result once the mutation has completed
-    mutation({ first:   mutation({ first_updated,
+  mutation({ first: "Hello!", second: "me" }).then((result) =>
     console.log(result),
   );
 }
