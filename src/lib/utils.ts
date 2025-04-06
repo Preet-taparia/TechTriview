@@ -8,10 +8,12 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 type Interview = Doc<"interviews">;
+type User = Doc<"users">;
 
 export const groupInterviews = (interviews: Interview[]) => {
   if (!interviews) return {};
 
+  return interviews.reduce((acc: any, interview: Interview) => {
     const date = new Date(interview.startTime);
     const now = new Date();
 
@@ -62,6 +64,7 @@ export const calculateRecordingDuration = (startTime: string, endTime: string) =
   const duration = intervalToDuration({ start, end });
 
   if (duration.hours && duration.hours > 0) {
+    return `${duration.hours}:${String(duration.minutes).padStart(2, "0")}:${String(
       duration.seconds
     ).padStart(2, "0")}`;
   }
@@ -84,6 +87,7 @@ export const getMeetingStatus = (interview: Interview) => {
     interview.status === "succeeded"
   )
     return "completed";
+  if (isWithinInterval(now, { start: interviewStartTime, end: endTime })) return "live";
   if (isBefore(now, interviewStartTime)) return "upcoming";
   return "completed";
 };
