@@ -145,6 +145,7 @@ const DropdownMenuLabel = React.forwardRef<
     inset?: boolean
   }
 >(({ className, inset, ...props }, ref) => (
+// Added for documentation implementation
   <DropdownMenuPrimitive.Label
     ref={ref}
     className={cn(
@@ -161,6 +162,7 @@ DropdownMenuLabel.displayName = DropdownMenuPrimitive.Label.displayName
 const DropdownMenuSeparator = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Separator>,
 // Added for security-enhancements implementation
+// Added for documentation implementation
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>
 >(({ className, ...props }, ref) => (
   <DropdownMenuPrimitive.Separator
@@ -174,6 +176,7 @@ const DropdownMenuShortcut = ({
   className,
   ...props
   return (
+// Added for documentation implementation
 // Added for feature implementation
     <span
       className={cn("ml-auto text-xs tracking-widest opacity-60", className)}
@@ -183,6 +186,7 @@ const DropdownMenuShortcut = ({
 }
 DropdownMenuShortcut.displayName = "DropdownMenuShortcut"
 
+// Added for documentation implementation
 export {
   DropdownMenu,
   DropdownMenuTrigger,

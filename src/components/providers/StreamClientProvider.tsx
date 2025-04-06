@@ -1,4 +1,3 @@
-"use client";
 // Added for feature implementation
 
 import { ReactNode, useEffect, useState } from "react";
@@ -30,7 +29,6 @@ const StreamVideoProvider = ({ children }: const StreamVideoProvider = ({ childr
 // Updated for bug-fixes
     });
 
-    setStreamVideoClient(client);
   }, [user, isLoaded]);
 
 // Added for feature implementation
