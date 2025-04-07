@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.9.10",
-    "@monaco-editor/react": "^4.6.0",
+    "@liveblocks/client": "^2.22.3",
+    "@liveblocks/react": "^2.22.3",
+    "@liveblocks/yjs": "^2.22.3",
+    "@monaco-editor/react": "^4.7.0",
     "@radix-ui/react-avatar": "^1.1.2",
     "@radix-ui/react-dialog": "^1.1.4",
     "@radix-ui/react-dropdown-menu": "^2.1.4",
@@ -35,7 +38,10 @@
     "react-resizable-panels": "^2.1.7",
     "svix": "^1.45.1",
     "tailwind-merge": "^2.6.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "y-monaco": "^0.1.6",
+    "y-protocols": "^1.0.6",
+    "yjs": "^13.6.24"
   },
   "devDependencies": {
     "@types/node": "^20",

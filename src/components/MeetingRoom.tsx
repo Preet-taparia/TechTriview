@@ -9,6 +9,13 @@ import {
 import { LayoutListIcon, LoaderIcon, UsersIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+
+import {
+  LiveblocksProvider,
+  RoomProvider,
+  ClientSideSuspense,
+} from "@liveblocks/react/suspense";
+
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "./ui/resizable";
 import {
   DropdownMenu,
@@ -102,7 +109,14 @@ function MeetingRoom() {
               {isWhiteboard ? "Switch to Code Editor" : "Switch to Whiteboard"}
             </Button>
           </div>
-          {isWhiteboard ? <Whiteboard /> : <CodeEditor />}
+          <LiveblocksProvider publicApiKey={`${process.env.NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY}`} >
+            <RoomProvider id="my-room">
+              <ClientSideSuspense fallback={<div>Loading…</div>}>
+                {isWhiteboard ? <Whiteboard /> : <CodeEditor />}
+              </ClientSideSuspense>
+            </RoomProvider>
+          </LiveblocksProvider>
+
         </ResizablePanel>
       </ResizablePanelGroup>
     </div>

@@ -1,16 +1,53 @@
 import { CODING_QUESTIONS, LANGUAGES } from "@/constants";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "./ui/resizable";
 import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { AlertCircleIcon, BookIcon, LightbulbIcon } from "lucide-react";
 import Editor from "@monaco-editor/react";
+import { editor } from "monaco-editor";
+
+import { MonacoBinding } from "y-monaco";
+import * as Y from "yjs";
+import { getYjsProviderForRoom } from "@liveblocks/yjs";
+import { useRoom } from "@liveblocks/react/suspense";
+import { Awareness } from "y-protocols/awareness";
 
 function CodeEditor() {
   const [selectedQuestion, setSelectedQuestion] = useState(CODING_QUESTIONS[0]);
   const [language, setLanguage] = useState<"javascript" | "python" | "java">(LANGUAGES[0].id);
   const [code, setCode] = useState(selectedQuestion.starterCode[language]);
+
+  const [editorRef, setEditorRef] = useState<editor.IStandaloneCodeEditor>();
+
+  const room = useRoom();
+  const yProvider = getYjsProviderForRoom(room);
+
+  useEffect(() => {
+    let binding: MonacoBinding;
+
+    if (editorRef) {
+      const yDoc = yProvider.getYDoc();
+      const yText = yDoc.getText("monaco");
+
+      // Attach Yjs to Monaco
+      binding = new MonacoBinding(
+        yText,
+        editorRef.getModel() as editor.ITextModel,
+        new Set([editorRef]),
+        yProvider.awareness as unknown as Awareness
+      );
+    }
+
+    return () => {
+      binding?.destroy();
+    };
+  }, [editorRef, room]);
+
+  const handleOnMount = useCallback((e: editor.IStandaloneCodeEditor) => {
+    setEditorRef(e);
+  }, []);
 
   const handleQuestionChange = (questionId: string) => {
     const question = CODING_QUESTIONS.find((q) => q.id === questionId)!;
@@ -165,6 +202,7 @@ function CodeEditor() {
         <div className="h-full relative">
           <Editor
             height={"100%"}
+            onMount={handleOnMount}
             defaultLanguage={language}
             language={language}
             theme="vs-dark"
