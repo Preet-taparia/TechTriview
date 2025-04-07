@@ -27,6 +27,7 @@ import { Button } from "./ui/button";
 import EndCallButton from "./EndCallButton";
 import CodeEditor from "./CodeEditor";
 import Whiteboard from "./Whiteboard";
+import { initialPresence, initialStorage } from "@/lib/liveblocksDefaults";
 
 function MeetingRoom() {
   const router = useRouter();
@@ -110,11 +111,16 @@ function MeetingRoom() {
             </Button>
           </div>
           <LiveblocksProvider publicApiKey={`${process.env.NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_KEY}`} >
-            <RoomProvider id="my-room">
+            <RoomProvider
+              id="my-room"
+              initialPresence={initialPresence}
+              initialStorage={initialStorage}
+            >
               <ClientSideSuspense fallback={<div>Loading…</div>}>
                 {isWhiteboard ? <Whiteboard /> : <CodeEditor />}
               </ClientSideSuspense>
             </RoomProvider>
+
           </LiveblocksProvider>
 
         </ResizablePanel>
