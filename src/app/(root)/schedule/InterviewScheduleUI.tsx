@@ -105,7 +105,7 @@ function InterviewScheduleUI() {
     }
   };
 
-  const addInterviewer = (interviewerId: string) => {
+  const addInterviewer = (interviewerId) => {
     if (!formData.interviewerIds.includes(interviewerId)) {
       setFormData((prev) => ({
         ...prev,
@@ -114,7 +114,7 @@ function InterviewScheduleUI() {
     }
   };
 
-  const removeInterviewer = (interviewerId: string) => {
+  const removeInterviewer = (interviewerId) => {
     if (interviewerId === user?.id) return;
     setFormData((prev) => ({
       ...prev,
@@ -140,7 +140,6 @@ function InterviewScheduleUI() {
         </div>
 
         {/* DIALOG */}
-
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
             <Button size="lg">Schedule Interview</Button>
@@ -150,6 +149,7 @@ function InterviewScheduleUI() {
             <DialogHeader>
               <DialogTitle>Schedule Interview</DialogTitle>
             </DialogHeader>
+            
             <div className="space-y-4 py-4">
               {/* INTERVIEW TITLE */}
               <div className="space-y-2">
@@ -160,7 +160,6 @@ function InterviewScheduleUI() {
                   onChange={(e) => setFormData({ ...formData, title: e.target.value })}
                 />
               </div>
-            </div>
 
               {/* INTERVIEW DESC */}
               <div className="space-y-2">
@@ -231,7 +230,7 @@ function InterviewScheduleUI() {
               </div>
 
               {/* DATE & TIME */}
-              <div className="flex gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {/* CALENDAR */}
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Date</label>
@@ -245,7 +244,6 @@ function InterviewScheduleUI() {
                 </div>
 
                 {/* TIME */}
-
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Time</label>
                   <Input
@@ -255,6 +253,7 @@ function InterviewScheduleUI() {
                     className="w-full"
                   />
                 </div>
+              </div>
 
               {/* ACTION BUTTONS */}
               <div className="flex justify-end gap-3 pt-4">
@@ -283,7 +282,7 @@ function InterviewScheduleUI() {
           <Loader2Icon className="size-8 animate-spin text-muted-foreground" />
         </div>
       ) : interviews.length > 0 ? (
-        <div className="spacey-4">
+        <div className="space-y-4">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {interviews.map((interview) => (
               <MeetingCard key={interview._id} interview={interview} />
@@ -296,4 +295,5 @@ function InterviewScheduleUI() {
     </div>
   );
 }
+
 export default InterviewScheduleUI;
