@@ -24,7 +24,6 @@ import {
 import UserInfo from "@/components/UserInfo";
 import { Loader2Icon, XIcon } from "lucide-react";
 import { Calendar } from "@/components/ui/calendar";
-import { TIME_SLOTS } from "@/constants";
 import MeetingCard from "@/components/MeetingCard";
 
 function InterviewScheduleUI() {
@@ -44,7 +43,7 @@ function InterviewScheduleUI() {
     title: "",
     description: "",
     date: new Date(),
-    time: "09:00",
+    time: "", // Changed from "09:00" to ""
     candidateId: "",
     interviewerIds: user?.id ? [user.id] : [],
   });
@@ -161,6 +160,7 @@ function InterviewScheduleUI() {
                   onChange={(e) => setFormData({ ...formData, title: e.target.value })}
                 />
               </div>
+            </div>
 
               {/* INTERVIEW DESC */}
               <div className="space-y-2">
@@ -248,23 +248,13 @@ function InterviewScheduleUI() {
 
                 <div className="space-y-2">
                   <label className="text-sm font-medium">Time</label>
-                  <Select
+                  <Input
+                    type="time"
                     value={formData.time}
-                    onValueChange={(time) => setFormData({ ...formData, time })}
-                  >
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select time" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {TIME_SLOTS.map((time) => (
-                        <SelectItem key={time} value={time}>
-                          {time}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                    onChange={(e) => setFormData({ ...formData, time: e.target.value })}
+                    className="w-full"
+                  />
                 </div>
-              </div>
 
               {/* ACTION BUTTONS */}
               <div className="flex justify-end gap-3 pt-4">

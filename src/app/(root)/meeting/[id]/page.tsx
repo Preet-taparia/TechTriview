@@ -13,7 +13,6 @@ function MeetingPage() {
   const { id } = useParams();
   const { isLoaded } = useUser();
   const { call, isCallLoading } = useGetCallById(id);
-
   const [isSetupComplete, setIsSetupComplete] = useState(false);
 
   if (!isLoaded || isCallLoading) return <LoaderUI />;
@@ -38,4 +37,5 @@ function MeetingPage() {
     </StreamCall>
   );
 }
+
 export default MeetingPage;
