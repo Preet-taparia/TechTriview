@@ -105,7 +105,7 @@ function InterviewScheduleUI() {
     }
   };
 
-  const addInterviewer = (interviewerId) => {
+  const addInterviewer = (interviewerId: string) => {
     if (!formData.interviewerIds.includes(interviewerId)) {
       setFormData((prev) => ({
         ...prev,
@@ -114,7 +114,7 @@ function InterviewScheduleUI() {
     }
   };
 
-  const removeInterviewer = (interviewerId) => {
+  const removeInterviewer = (interviewerId: string) => {
     if (interviewerId === user?.id) return;
     setFormData((prev) => ({
       ...prev,
